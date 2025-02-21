@@ -1,6 +1,6 @@
 # Noah Nicol's Personal Website
 
-This repository contains the source code for my personal website [noahnicol.xyz](https://noahnicol.xyz), built with Hugo and the PaperMod theme.
+This repository contains the source code for [my personal website]([https://noahnicol.xyz](https://n5cent28.github.io/my-website/)), built with Hugo and the PaperMod theme.
 
 ## 🛠 Tech Stack
 
