@@ -1,5 +1,5 @@
-baseURL: "https://nicoranabhat.xyz/"
-title: "Nico Ranabhat"
+baseURL: "https://noahnicol.xyz/"
+title: "Noah Nicol"
 theme: "PaperMod"
 languageCode: "en-us"
 pagination:
@@ -16,12 +16,12 @@ minify:
 
 params:
   env: production
-  title: Nico Ranabhat
+  title: Noah Nicol
   description: "Personal website and blog"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Nico Ranabhat
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph>"]
+  author: Noah Nicol
+
+  images: ["images/profile.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -43,11 +43,13 @@ params:
   TocOpen: true
 
   profileMode:
-    enabled: true   # Enable profile mode for homepage
-    title: "👋 Hi, I'm Nico"
-    subtitle: "I like to build things and play outside"
-    imageUrl: "images/coder_skater.gif"    # Optional: add a profile image
-    imageTitle: ""  # Optional: image alt text
+    enabled: true
+    title: "Noah Nicol"
+    subtitle: "Bioinformatic Scientist"
+    imageUrl: "images/profile.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Noah Nicol"
     buttons:
       - name: about
         url: /about/
@@ -60,9 +62,10 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/nranabhat/"
+      url: "https://github.com/N5cent28"
     - name: linkedin
-      url: "https://www.linkedin.com/in/nranabhat/"
+      url: "https://www.linkedin.com/in/noah-nicol-2a0163144/"
+      
 
 menu:
   main:

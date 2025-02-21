@@ -5,24 +5,25 @@ ShowToc: false
 url: "/hobbies/"
 ---
 
-When I'm not coding or building things, you can usually find me throwing discs, climbing rocks, or sliding down mountains!* 🏃‍♂️🧗‍♂️🏂
+When I'm not coding or discovering, you can usually find me chasing wind, exploring underwater, or throwing discs around! 🏄‍♂️🌊🏃‍♂️
 
-### Rock Climbing 
+### Wind Sports 
 
-I started climbing at [Mount Mendota](https://recwell.wisc.edu/locations/climbing/) and spent a few months climbing at [BlocHaven](https://www.blochaven.com/) while in South Carolina (their coffee shop is amazing btw). These days you can find me at [Boulders](https://www.bouldersgym.com/) working on v3-4s and pretending I know what beta means.
+My love for wind-powered adventures started at <a href="https://docs.google.com/presentation/d/1do98CHFK_bMw7gcbxYwENh_iz35WgRai5JEaWBwYhsI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Hoofer Sailing Club</a>, where I've been teaching and volunteering for 7 years. From basic dinghy lessons to advanced lightwind freestyle, helping others discover the joy of sailing has been incredibly rewarding.
 
-### Snowboarding
+This passion evolved into more extreme pursuits - <a href="https://www.instagram.com/p/B3mmMocFZTz/" target="_blank" rel="noopener noreferrer">windsurfing in summer</a> and <a href="https://youtu.be/8ZxxVSNtA8s" target="_blank" rel="noopener noreferrer">carving up ice in winter</a>. There's nothing quite like harnessing the power of wind! Still working on those jumps, but the wipeouts make for great stories.
 
-I started riding with [Hoofers](https://www.hoofersns.org/) in college. Made it out to Winter Park and Copper Mountain a few times, where I discovered that Colorado's "green" runs are Wisconsin's "black diamonds" (who knew?).
+### Outdoor Exploration
 
-When it's not snowing, I teach sailing at [Hoofers](https://www.hoofersailing.org/). Nothing beats a summer day on Lake Mendota!
+The biosphere has always fascinated me. From [night diving with tarpin](https://youtu.be/HYuVcYvMoOk) to <a href="https://youtu.be/S-cWvG5vEPg" target="_blank" rel="noopener noreferrer">camping out on carribean islands</a>, the natural world helps me feel centered. My favorite moments include watching [humbacks bubble feed](videolink) on either side of our sailboat and [grizzly bears snatch salmon](videolink) in SE Alaska. 
+
 
 ### Ultimate Frisbee
 
-This is where most of my bruises come from! I started playing at [Madison West HS](https://www.instagram.com/madisonwestultimate/), where I learned that running is more fun when you're chasing plastic. 
+This is where my bumps and bruises come from! I started playing at <a href="https://www.instagram.com/p/BOQnVWCAZam/" target="_blank" rel="noopener noreferrer">Madison West HS</a>, where I learned that playing a fake sport is far easier than a competitive one. 
 
-Played for the [Wisconsin Hodags](https://www.instagram.com/hodaglove/) in college - some of my best memories are from tournaments with those folks. Was honored to be nominated for the [Callahan Award](https://www.youtube.com/watch?v=jsmigKE2v9U) in 2023.
+I played for the <a href="https://www.instagram.com/p/B5vD3mwnhD-/?img_index=1" target="_blank" rel="noopener noreferrer">Wisconsin Hodags</a> in college - most of my closest friendships were forged competing with those folks.
 
-These days I play for the [Madison Radicals](https://www.instagram.com/madisonradicals/), where I get to dive around in front of actual fans! Still can't believe people pay to watch us throw frisbees around.
+These days I play for the <a href="https://www.instagram.com/madisonradicals/" target="_blank" rel="noopener noreferrer">Madison Radicals</a>, where I get to dive around in front of actual fans! Still can't believe people pay to watch us throw frisbees around.
 
-**Currently accepting suggestions for more hobbies that involve throwing myself through the air* 🚀 
+**Currently accepting suggestions for more hobbies that involve flying through air or gliding through water* 🚀 
