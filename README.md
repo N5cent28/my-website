@@ -9,25 +9,28 @@ This repository contains the source code for my personal website [noahnicol.xyz]
 - **Deployment**: GitHub Pages
 - **Custom CSS**: Extended PaperMod theme with custom styling
 
-
 ## 🚀 Local Development
 
 1. Install Hugo:
-  
-  (macOS) brew install hugo
-  
-  (Windows) choco install hugo-extended
+   - **macOS**: 
+     ```bash
+     brew install hugo
+     ```
+   - **Windows**: 
+     ```bash
+     choco install hugo-extended
+     ```
+
 2. Clone the repository:
-  bash
-  
-  git clone https://github.com/N5cent28/noahnicol.xyz.git
-  
-  cd noahnicol.xyz
+   ```bash
+   git clone https://github.com/N5cent28/noahnicol.xyz.git
+   cd noahnicol.xyz
+   ```
 3. Start the development server:
 
-  bash
-  
+  ```bash
   hugo server -D
+  ```
 
 4. Visit `http://localhost:1313`
 
