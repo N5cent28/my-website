@@ -47,8 +47,8 @@ params:
     title: "Noah Nicol"
     subtitle: "Bioinformatic Scientist"
     imageUrl: "/images/profile.jpg"
-    imageWidth: 120
-    imageHeight: 120
+    imageWidth: 110
+    imageHeight: 110
     imageTitle: "Noah Nicol"
     buttons:
       - name: about
