@@ -4,6 +4,10 @@ draft: false
 ShowToc: False
 ---
 
+<div class="about-image">
+<img src="/images/profile.jpg" alt="Profile photo" />
+</div>
+
 I've always been fascinated by life in all its forms. Growing up with <a href="https://www.instagram.com/p/DC0QFJAPNJt/?hl=en&img_index=1" target="_blank" rel="noopener noreferrer">more than my fair share of injuries</a>, I developed a firsthand appreciation for human biology and resilience. This curiosity, combined with my love for math and physics, naturally led me to Biomedical Engineering at UW-Madison - a field where I wouldn't have to choose between my varied interests.
 
 During my undergraduate years, I had the incredible opportunity to work in the <a href="https://scbrm.bme.wisc.edu/" target="_blank" rel="noopener noreferrer">Ashton Lab</a>, where I dove deep into regenerative biology and neurodevelopment. It was during this time that I discovered my calling in bioinformatics. Just like <a href="https://www.youtube.com/c/3blue1brown" target="_blank" rel="noopener noreferrer">3Blue1Brown's</a> elegant mathematical explanations, I found beauty in using code to solve complex biological problems. The excitement of partnering with others to tackle challenges through programming was unmatched - I realized I could make a much bigger impact with a keyboard than with a pipette.

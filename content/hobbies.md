@@ -5,17 +5,24 @@ ShowToc: false
 url: "/hobbies/"
 ---
 
-When I'm not coding or discovering, you can usually find me chasing wind, exploring underwater, or throwing discs around! 🏄‍♂️🌊🏃‍♂️
+<div class="hobbies-intro">
+  <div class="intro-text">
+    When I'm not coding or discovering, you can usually find me chasing wind, exploring underwater, or throwing discs around! 🏄‍♂️🌊🏃‍♂️
+  </div>
+  <div class="intro-image">
+    <img src="/images/windsurf.gif" alt="Noah windsurfing" class="profile-image">
+  </div>
+</div>
 
 ### Wind Sports 
 
-My love for wind-powered adventures started at <a href="https://docs.google.com/presentation/d/1do98CHFK_bMw7gcbxYwENh_iz35WgRai5JEaWBwYhsI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Hoofer Sailing Club</a>, where I've been teaching and volunteering for 7 years. From basic dinghy lessons to advanced lightwind freestyle, helping others discover the joy of sailing has been incredibly rewarding.
+My love for wind-powered adventures started at <a href="https://docs.google.com/presentation/d/1do98CHFK_bMw7gcbxYwENh_iz35WgRai5JEaWBwYhsI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Hoofer Sailing Club</a>, where I've been teaching and volunteering since 2015. From basic dinghy lessons to advanced lightwind freestyle, helping others discover the joy of sailing has been incredibly rewarding.
 
 This passion evolved into more extreme pursuits - <a href="https://www.instagram.com/p/B3mmMocFZTz/" target="_blank" rel="noopener noreferrer">windsurfing in summer</a> and <a href="https://youtu.be/8ZxxVSNtA8s" target="_blank" rel="noopener noreferrer">carving up ice in winter</a>. There's nothing quite like harnessing the power of wind! Still working on those jumps, but the wipeouts make for great stories.
 
 ### Outdoor Exploration
 
-The biosphere has always fascinated me. From [night diving with tarpin](https://youtu.be/HYuVcYvMoOk) to <a href="https://youtu.be/S-cWvG5vEPg" target="_blank" rel="noopener noreferrer">camping out on carribean islands</a>, the natural world helps me feel centered. My favorite moments include watching [humbacks bubble feed](videolink) on either side of our sailboat and [grizzly bears snatch salmon](videolink) in SE Alaska. 
+The biosphere has always fascinated me. From [night diving with tarpin](https://youtu.be/HYuVcYvMoOk) to <a href="https://youtu.be/S-cWvG5vEPg" target="_blank" rel="noopener noreferrer">camping out on carribean islands</a>, the natural world helps me feel centered. My favorite moments include watching humbacks bubble feed on either side of our sailboat and [grizzly bears snatch salmon](videolink) in SE Alaska. 
 
 
 ### Ultimate Frisbee

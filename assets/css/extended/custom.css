@@ -437,4 +437,75 @@ h2[id^="article-"] {
 /* Add some spacing above paper titles since we're hiding the article numbers */
 h3 {
     margin-top: 2em;    /* Add space between articles */
+}
+
+/* Add these to your existing CSS */
+.hobbies-header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.profile-image {
+    width: 200px;       /* Reduced from 300px (30% smaller) */
+    height: auto;       /* Keep auto height for aspect ratio */
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Update these styles */
+.hobbies-intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2em;
+}
+
+.intro-text {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.intro-image {
+    flex: 0 0 200px;    /* Match the new width */
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .hobbies-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* About page styles */
+.about-intro {
+    position: relative;
+    margin-bottom: 2rem;
+    overflow: hidden; /* Ensure proper containment */
+}
+
+.about-text {
+    margin-top: 0;
+}
+
+.about-image {
+    float: right;
+    margin: 0 0 1rem 2rem;
+    width: 150px;
+}
+
+.about-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        width: 80px;
+    }
 } 
