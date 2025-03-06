@@ -21,7 +21,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: Noah Nicol
 
-  images: ["/images/silly.jpg"]
+  images: ["/images/me_graduation.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -46,7 +46,7 @@ params:
     enabled: true
     title: "Noah Nicol"
     subtitle: "Bioinformatic Scientist"
-    imageUrl: "/images/silly.jpg"
+    imageUrl: "/images/me_graduation.jpg"
     imageWidth: 110
     imageHeight: 110
     imageTitle: "Noah Nicol"
