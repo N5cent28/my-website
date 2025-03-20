@@ -1,0 +1,116 @@
+<h1 id="quantitative-trait-association-analysis">Quantitative Trait Association Analysis</h1>
+<p>This project contains scripts for performing quantitative trait association analysis and meta-analysis of GWAS summary statistics.</p>
+<h2 id="association-analysis">Association Analysis</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Python 3.6+</li>
+<li>Required packages are listed in <code>requirements.txt</code></li>
+</ul>
+<h3 id="installation">Installation</h3>
+<p>Install the required packages using pip:</p>
+<pre><code class="lang-bash">pip <span class="hljs-keyword">install</span> -r requirements.txt
+</code></pre>
+<h3 id="usage">Usage</h3>
+<p>The main script is <code>association_analysis.py</code>. It can be run with default parameters:</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">python</span> association_analysis.<span class="hljs-keyword">py</span>
+</code></pre>
+<p>Or with custom parameters:</p>
+<pre><code class="lang-bash">python association_analysis<span class="hljs-selector-class">.py</span> --pheno path/to/phenotype<span class="hljs-selector-class">.txt</span><span class="hljs-selector-class">.gz</span> --covar path/to/covariates<span class="hljs-selector-class">.txt</span><span class="hljs-selector-class">.gz</span> --bed path/to/genotype<span class="hljs-selector-class">.bed</span><span class="hljs-selector-class">.gz</span> --bim path/to/genotype<span class="hljs-selector-class">.bim</span><span class="hljs-selector-class">.gz</span> --fam path/to/genotype<span class="hljs-selector-class">.fam</span><span class="hljs-selector-class">.gz</span> --out results<span class="hljs-selector-class">.txt</span> --chunk-size <span class="hljs-number">500</span> --manhattan manhattan<span class="hljs-selector-class">.png</span> --qq qq.png
+</code></pre>
+<h3 id="command-line-arguments">Command-line Arguments</h3>
+<ul>
+<li><code>--pheno</code>: Path to phenotype file (default: &#39;Data/Problem 1/eur_phenotype.txt.gz&#39;)</li>
+<li><code>--covar</code>: Path to covariate file (default: &#39;Data/Problem 1/eur_covariates.txt.gz&#39;)</li>
+<li><code>--bed</code>: Path to BED file (default: &#39;Data/Problem 1/genotype_data/P1_data.bed.gz&#39;)</li>
+<li><code>--bim</code>: Path to BIM file (default: &#39;Data/Problem 1/genotype_data/P1_data.bim.gz&#39;)</li>
+<li><code>--fam</code>: Path to FAM file (default: &#39;Data/Problem 1/genotype_data/P1_data.fam.gz&#39;)</li>
+<li><code>--out</code>: Path to output file (default: &#39;association_results.txt&#39;)</li>
+<li><code>--chunk-size</code>: Number of SNPs to process in each chunk (default: 1000)</li>
+<li><code>--manhattan</code>: Path to save Manhattan plot (default: &#39;manhattan_plot.png&#39;)</li>
+<li><code>--qq</code>: Path to save QQ plot (default: &#39;qq_plot.png&#39;)</li>
+</ul>
+<h3 id="output">Output</h3>
+<p>The script produces the following outputs:</p>
+<ol>
+<li><p>A tab-separated text file containing association results with columns:</p>
+<ul>
+<li>CHR: Chromosome</li>
+<li>SNP: SNP ID</li>
+<li>BP: Base pair position</li>
+<li>A1: Allele 1</li>
+<li>A2: Allele 2</li>
+<li>BETA: Regression coefficient</li>
+<li>SE: Standard error</li>
+<li>P: P-value</li>
+</ul>
+</li>
+<li><p>A Manhattan plot showing -log10(p-value) across the genome</p>
+</li>
+<li><p>A QQ plot comparing observed vs. expected p-values</p>
+</li>
+</ol>
+<h3 id="implementation-details">Implementation Details</h3>
+<p>The script performs the following steps:</p>
+<ol>
+<li>Loads phenotype and covariate data</li>
+<li>Reads SNP and sample information from BIM and FAM files</li>
+<li>Processes the BED file in chunks to avoid memory issues</li>
+<li>For each SNP, performs linear regression with the specified covariates</li>
+<li>Generates summary statistics and plots</li>
+</ol>
+<p>The association analysis uses a linear regression model with the following covariates:</p>
+<ul>
+<li>Sex</li>
+<li>Age</li>
+<li>PC1-4 (principal components)</li>
+</ul>
+<h2 id="meta-analysis">Meta-Analysis</h2>
+<p>This repository also includes scripts for performing fixed-effect meta-analysis on GWAS summary statistics.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>R with data.table package (for R implementation)</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<h4 id="r-implementation">R Implementation</h4>
+<pre><code class="lang-bash"><span class="hljs-keyword">Rscript </span>meta_analysis.R
+</code></pre>
+<h3 id="input-files">Input Files</h3>
+<p>The meta-analysis scripts expect two summary statistics files with the following columns:</p>
+<ul>
+<li>ID: SNP identifier</li>
+<li>Beta: Effect size</li>
+<li>SE: Standard error</li>
+<li>P: P-value</li>
+</ul>
+<p>Default file paths:</p>
+<ul>
+<li>Dataset 1: &quot;Data/Problem 2/Sumstats_1.txt.gz&quot;</li>
+<li>Dataset 2: &quot;Data/Problem 2/Sumstats_2.txt.gz&quot;</li>
+</ul>
+<h3 id="output">Output</h3>
+<p>The meta-analysis produces a tab-separated text file containing:</p>
+<ul>
+<li>SNP: SNP identifier</li>
+<li>Combined_Effect: Meta-analysis effect size</li>
+<li>Combined_SE: Meta-analysis standard error</li>
+<li>Combined_P: Meta-analysis p-value</li>
+<li>Sumstats1_P: P-value from first dataset</li>
+<li>Sumstats2_P: P-value from second dataset</li>
+<li>Improved: Indicates whether the meta-analysis p-value is lower than both original p-values</li>
+</ul>
+<h3 id="implementation-details">Implementation Details</h3>
+<p>The meta-analysis implements a fixed-effect model using inverse-variance weighting:</p>
+<ol>
+<li>Each study is weighted by the inverse of its variance (1/SE²)</li>
+<li>The combined effect size is the weighted average of individual effect sizes</li>
+<li>The combined standard error is calculated from the sum of precisions</li>
+<li>P-values are derived from the normal distribution</li>
+</ol>
+<p>The script determines which associations are strengthened by meta-analysis by identifying SNPs where the meta-analysis p-value is smaller than both original p-values.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The association script handles PLINK binary files (.bed, .bim, .fam) directly</li>
+<li>For large datasets, adjust the chunk size to balance memory usage and performance</li>
+<li>Missing genotypes are handled appropriately in the analysis</li>
+<li>The meta-analysis assumes that both summary statistics files contain the same SNPs in the same order </li>
+</ul>
