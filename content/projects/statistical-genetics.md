@@ -27,7 +27,7 @@ For this assignment, we conducted a genome-wide association study (GWAS) to iden
 
 The analysis identified several suggestive associations primarily on chromosome 12, with the strongest signal at rs4348470 (p = 1.37×10⁻⁷). We visualized the results through Manhattan and QQ plots, which confirmed the absence of genome-wide significant associations but revealed multiple variants approaching significance.
 
-![Manhattan Plot](/images/manhattan_plot.png)
+![Manhattan Plot](/images/BMI620/Final_Project/manhattan_plot_official.png)
 
 ## Schizophrenia GWAS Final Project
 
@@ -47,14 +47,14 @@ For my final project, I conducted a comprehensive genome-wide association study 
 - **Visualization**: Created Manhattan plots, QQ plots, and LocusZoom plots for result interpretation
 - **Software Tools**: Used LDSC, PLINK, and custom Python scripts for analysis pipeline
 
-![Schizophrenia Manhattan Plot](/images/manhattan_plot.png)
+![Schizophrenia Manhattan Plot](/images/BMI620/Final_Project/manhattan_plot_official.png)
 
-![Heritability Estimates](/images/heritability_enrichment_figures/heritability_estimates.png)
+![LDSC Results](/images/BMI620/Final_Project/ldsc_results_full.png)
+
+![Genetic Correlations](/images/BMI620/Final_Project/complete_genetic_correlations_heatmap.png)
+
+![Tissue Enrichment](/images/BMI620/Final_Project/tissue_enrichment_grouped.png)
 
 ### Results Summary
 
 The analysis revealed strong genetic signals in the MHC region on chromosome 6, consistent with established schizophrenia loci. The heritability analysis confirmed substantial genetic contribution to schizophrenia risk, while genetic correlation analysis provided insights into shared genetic architecture with related psychiatric and behavioral traits.
-
-## Future Assignments
-
-This section will be expanded with additional statistical genetics assignments and projects as they are completed. 
