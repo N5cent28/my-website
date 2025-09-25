@@ -12,7 +12,7 @@ ShowToc: true
   <a href="/documents/schizophrenia_gwas_analysis_final.html" class="project-link" target="_blank" rel="noopener noreferrer">
     <span>Complete Analysis Report</span>
   </a>
-  <a href="/documents/Final.BMI620.pdf" class="project-link" target="_blank" rel="noopener noreferrer">
+  <a href="https://docs.google.com/presentation/d/1xdyZvuLE3BKRSxEN0IOOUuIh0zLPjCIh1FJHD3ozpVQ/edit?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">
     <span>Final Presentation</span>
   </a>
 </div>
