@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>PWA_FUNCTIONALITY_GUIDE</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<h1 id="ymir-sailing-club-pwa---comprehensive-functionality-guide">Ymir
+Sailing Club PWA - Comprehensive Functionality Guide</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol type="1">
+<li><a href="#overview">Overview</a></li>
+<li><a href="#technical-architecture">Technical Architecture</a></li>
+<li><a href="#core-features">Core Features</a></li>
+<li><a href="#database-design">Database Design</a></li>
+<li><a href="#api-endpoints">API Endpoints</a></li>
+<li><a href="#progressive-web-app-features">Progressive Web App
+Features</a></li>
+<li><a href="#authentication--security">Authentication &amp;
+Security</a></li>
+<li><a href="#notification-system">Notification System</a></li>
+<li><a href="#multi-language-support">Multi-language Support</a></li>
+<li><a href="#admin-features">Admin Features</a></li>
+<li><a href="#mobile-optimization">Mobile Optimization</a></li>
+<li><a href="#deployment--infrastructure">Deployment &amp;
+Infrastructure</a></li>
+</ol>
+<h2 id="overview">Overview</h2>
+<p>The Ymir Sailing Club PWA (Progressive Web App) is a comprehensive
+digital solution for managing a sailing club’s boat rental and member
+management system. Built with modern web technologies, it provides both
+web and mobile app experiences through a single codebase.</p>
+<h3 id="key-capabilities">Key Capabilities</h3>
+<ul>
+<li><strong>Boat Management</strong>: Real-time tracking of boat
+availability, maintenance status, and usage</li>
+<li><strong>Member Management</strong>: Complete member database with
+authentication and profile management</li>
+<li><strong>Check-in/Check-out System</strong>: Digital boat rental
+process with QR code integration</li>
+<li><strong>Notification System</strong>: Push notifications for boat
+reminders and club communications</li>
+<li><strong>Admin Dashboard</strong>: Comprehensive management interface
+for club administrators</li>
+<li><strong>Multi-language Support</strong>: English and Icelandic
+language support</li>
+<li><strong>Mobile-First Design</strong>: Optimized for mobile devices
+with offline capabilities</li>
+</ul>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="frontend-framework-astro">Frontend Framework: Astro</h3>
+<p>The application uses <strong>Astro</strong>, a modern static site
+generator that provides: - <strong>Server-Side Rendering (SSR)</strong>:
+Pages are rendered on the server for better performance -
+<strong>Component-Based Architecture</strong>: Reusable UI components
+for maintainability - <strong>Zero-JavaScript by Default</strong>: Only
+loads JavaScript when needed, improving performance -
+<strong>Multi-Framework Support</strong>: Can integrate React, Vue, or
+Svelte components if needed</p>
+<h3 id="backend-netlify-functions">Backend: Netlify Functions</h3>
+<p>The backend uses <strong>Netlify Functions</strong>, which are
+serverless functions that: - <strong>Auto-Scale</strong>: Automatically
+handle traffic spikes without server management -
+<strong>Event-Driven</strong>: Execute code in response to HTTP requests
+- <strong>Cost-Effective</strong>: Pay only for actual usage -
+<strong>Global Distribution</strong>: Deploy to multiple regions for low
+latency</p>
+<h3 id="database-postgresql-neon">Database: PostgreSQL (Neon)</h3>
+<p>The application uses <strong>PostgreSQL</strong> hosted on
+<strong>Neon</strong>: - <strong>Relational Database</strong>:
+Structured data storage with relationships between entities -
+<strong>ACID Compliance</strong>: Ensures data integrity and consistency
+- <strong>Scalability</strong>: Can handle growing amounts of data and
+users - <strong>Cloud-Hosted</strong>: Managed database service with
+automatic backups</p>
+<h3 id="key-technical-concepts-explained">Key Technical Concepts
+Explained</h3>
+<h4 id="server-side-rendering-ssr">Server-Side Rendering (SSR)</h4>
+<p>Instead of loading a blank page and then filling it with content
+using JavaScript, SSR generates the complete HTML on the server before
+sending it to the browser. This means: - <strong>Faster Initial
+Load</strong>: Users see content immediately - <strong>Better
+SEO</strong>: Search engines can easily read the content -
+<strong>Improved Performance</strong>: Less JavaScript needs to be
+downloaded and executed</p>
+<h4 id="progressive-web-app-pwa">Progressive Web App (PWA)</h4>
+<p>A PWA is a web application that behaves like a native mobile app: -
+<strong>Installable</strong>: Users can “install” it on their home
+screen - <strong>Offline Capable</strong>: Works even without internet
+connection - <strong>Push Notifications</strong>: Can send notifications
+like native apps - <strong>Responsive</strong>: Adapts to different
+screen sizes</p>
+<h4 id="serverless-functions">Serverless Functions</h4>
+<p>Instead of running a traditional server 24/7, serverless functions: -
+<strong>Execute on Demand</strong>: Only run when called -
+<strong>Auto-Scale</strong>: Automatically handle multiple requests -
+<strong>No Server Management</strong>: Cloud provider handles
+infrastructure - <strong>Cost-Effective</strong>: Pay only for execution
+time</p>
+<h2 id="core-features">Core Features</h2>
+<h3 id="boat-management-system">1. Boat Management System</h3>
+<h4 id="real-time-boat-status-tracking">Real-Time Boat Status
+Tracking</h4>
+<p>The system tracks each boat’s current status: -
+<strong>Operational</strong>: Available for use - <strong>Checked
+Out</strong>: Currently in use by a member -
+<strong>Maintenance</strong>: Under repair or maintenance - <strong>Out
+of Service</strong>: Temporarily unavailable</p>
+<h4 id="boat-types">Boat Types</h4>
+<ul>
+<li><strong>Individual Boats</strong>: One user at a time (Quest, Zest,
+Topaz, Laser)</li>
+<li><strong>Shared Boats</strong>: Multiple users can use simultaneously
+(Kayak, Paddle Board)</li>
+</ul>
+<h4 id="technical-implementation">Technical Implementation</h4>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Example: Checking boat availability</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> boatStatus <span class="op">=</span> <span class="cf">await</span> <span class="fu">getBoatStatus</span>(boatId)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (boatStatus<span class="op">.</span><span class="at">status</span> <span class="op">===</span> <span class="st">&#39;operational&#39;</span>) {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Boat is available for checkout</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="member-management">2. Member Management</h3>
+<h4 id="member-database">Member Database</h4>
+<p>Each member has: - <strong>Unique Member Number</strong>: Primary
+identifier - <strong>Personal Information</strong>: Name, phone, email -
+<strong>Authentication</strong>: PIN-based login system - <strong>Admin
+Privileges</strong>: Some members can access admin features -
+<strong>Sailing History</strong>: Track of all boat usage</p>
+<h4 id="member-authentication">Member Authentication</h4>
+<p>The system uses a simple PIN-based authentication: - <strong>No
+Passwords</strong>: Members use their member number and PIN -
+<strong>Session Management</strong>: Maintains login state across page
+refreshes - <strong>Security</strong>: PINs are hashed before storage in
+the database</p>
+<h3 id="check-incheck-out-system">3. Check-in/Check-out System</h3>
+<h4 id="digital-boat-rental-process">Digital Boat Rental Process</h4>
+<ol type="1">
+<li><strong>Member Login</strong>: Member enters their number and
+PIN</li>
+<li><strong>Boat Selection</strong>: Choose from available boats</li>
+<li><strong>QR Code Scan</strong>: Scan QR code on the boat for instant
+checkout</li>
+<li><strong>Time Tracking</strong>: System records departure and
+expected return times</li>
+<li><strong>Check-in</strong>: Member returns boat and checks it back
+in</li>
+</ol>
+<h4 id="qr-code-integration">QR Code Integration</h4>
+<p>Each boat has a unique QR code that: - <strong>Directs to Checkout
+Page</strong>: QR code contains boat-specific URL - <strong>Pre-fills
+Information</strong>: Automatically selects the correct boat -
+<strong>Mobile Optimized</strong>: Works seamlessly on mobile
+devices</p>
+<h3 id="real-time-notifications">4. Real-Time Notifications</h3>
+<h4 id="push-notification-system">Push Notification System</h4>
+<p>The app can send notifications for: - <strong>Boat
+Reminders</strong>: Notify when return time is approaching -
+<strong>Overdue Alerts</strong>: Alert when boats are overdue -
+<strong>Maintenance Updates</strong>: Notify about boat status changes -
+<strong>Club Communications</strong>: General announcements</p>
+<h4 id="technical-implementation-1">Technical Implementation</h4>
+<ul>
+<li><strong>Service Worker</strong>: Background script that handles
+notifications</li>
+<li><strong>VAPID Keys</strong>: Secure method for sending push
+notifications</li>
+<li><strong>Browser APIs</strong>: Uses Web Push API for cross-platform
+notifications</li>
+</ul>
+<h2 id="database-design">Database Design</h2>
+<h3 id="core-tables">Core Tables</h3>
+<h4 id="members-table">Members Table</h4>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> members (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  member_number TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  name TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  phone TEXT,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  email TEXT,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  pin TEXT,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  is_admin <span class="dt">BOOLEAN</span> <span class="kw">DEFAULT</span> <span class="kw">FALSE</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  created_at <span class="dt">TIMESTAMP</span> <span class="kw">DEFAULT</span> <span class="fu">CURRENT_TIMESTAMP</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h4 id="boats-table">Boats Table</h4>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> boats (</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">id</span> TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  name TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  status TEXT <span class="kw">DEFAULT</span> <span class="st">&#39;operational&#39;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  boat_type TEXT <span class="kw">DEFAULT</span> <span class="st">&#39;individual&#39;</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  last_maintenance <span class="dt">TIMESTAMP</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  notes TEXT</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h4 id="check-ins-table">Check-ins Table</h4>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> check_ins (</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">id</span> SERIAL <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  boat_id TEXT <span class="kw">REFERENCES</span> boats(<span class="kw">id</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  sailor_name TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  member_number TEXT <span class="kw">REFERENCES</span> members(member_number),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  departure_time <span class="dt">TIMESTAMP</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  expected_return <span class="dt">TIMESTAMP</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  actual_return <span class="dt">TIMESTAMP</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  created_at <span class="dt">TIMESTAMP</span> <span class="kw">DEFAULT</span> <span class="fu">CURRENT_TIMESTAMP</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h3 id="database-relationships">Database Relationships</h3>
+<ul>
+<li><strong>One-to-Many</strong>: One member can have many
+check-ins</li>
+<li><strong>One-to-Many</strong>: One boat can have many check-ins</li>
+<li><strong>Foreign Keys</strong>: Ensure data integrity between related
+tables</li>
+<li><strong>Indexes</strong>: Optimize query performance for frequently
+accessed data</li>
+</ul>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="authentication-endpoints">Authentication Endpoints</h3>
+<ul>
+<li><code>POST /api/member-login</code> - Member authentication</li>
+<li><code>POST /api/admin-login</code> - Admin authentication</li>
+</ul>
+<h3 id="boat-management">Boat Management</h3>
+<ul>
+<li><code>GET /api/boat-status</code> - Get boat status and
+availability</li>
+<li><code>POST /api/check-in</code> - Check out a boat</li>
+<li><code>POST /api/check-out</code> - Check in a boat</li>
+<li><code>POST /api/update-boat-status</code> - Update boat status
+(admin)</li>
+</ul>
+<h3 id="member-management-1">Member Management</h3>
+<ul>
+<li><code>GET /api/members</code> - Get all members</li>
+<li><code>POST /api/members</code> - Create new member</li>
+<li><code>GET /api/profile</code> - Get member profile</li>
+</ul>
+<h3 id="notification-system">Notification System</h3>
+<ul>
+<li><code>POST /api/push-subscription</code> - Subscribe to
+notifications</li>
+<li><code>POST /api/cron-notifications</code> - Trigger scheduled
+notifications</li>
+</ul>
+<h2 id="progressive-web-app-features">Progressive Web App Features</h2>
+<h3 id="service-worker">Service Worker</h3>
+<p>A service worker is a background script that: - <strong>Caches
+Resources</strong>: Stores files locally for offline access -
+<strong>Handles Notifications</strong>: Manages push notifications -
+<strong>Intercepts Requests</strong>: Can serve cached content when
+offline - <strong>Background Sync</strong>: Can sync data when
+connection is restored</p>
+<h3 id="web-app-manifest">Web App Manifest</h3>
+<p>The manifest file defines how the app behaves when “installed”:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Ymir Sailing Club&quot;</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;short_name&quot;</span><span class="fu">:</span> <span class="st">&quot;Ymir Sailing&quot;</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;Sailing club boat management system&quot;</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;start_url&quot;</span><span class="fu">:</span> <span class="st">&quot;/&quot;</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;display&quot;</span><span class="fu">:</span> <span class="st">&quot;standalone&quot;</span><span class="fu">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;background_color&quot;</span><span class="fu">:</span> <span class="st">&quot;#ffffff&quot;</span><span class="fu">,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;theme_color&quot;</span><span class="fu">:</span> <span class="st">&quot;#2563eb&quot;</span><span class="fu">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;icons&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;src&quot;</span><span class="fu">:</span> <span class="st">&quot;/icon-192.svg&quot;</span><span class="fu">,</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;sizes&quot;</span><span class="fu">:</span> <span class="st">&quot;192x192&quot;</span><span class="fu">,</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;image/svg+xml&quot;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 id="offline-capabilities">Offline Capabilities</h3>
+<p>The app can work offline by: - <strong>Caching Static
+Assets</strong>: Images, CSS, and JavaScript files - <strong>Storing
+User Data</strong>: Member information and preferences -
+<strong>Queueing Actions</strong>: Store actions to sync when online -
+<strong>Graceful Degradation</strong>: Show appropriate messages when
+offline</p>
+<h2 id="authentication-security">Authentication &amp; Security</h2>
+<h3 id="pin-based-authentication">PIN-Based Authentication</h3>
+<p>Instead of complex passwords, the system uses: - <strong>3-Digit
+PINs</strong>: Easy to remember and enter on mobile - <strong>Hashed
+Storage</strong>: PINs are encrypted before database storage -
+<strong>Session Management</strong>: Maintains login state securely -
+<strong>Automatic Logout</strong>: Sessions expire after inactivity</p>
+<h3 id="data-security">Data Security</h3>
+<ul>
+<li><strong>HTTPS Only</strong>: All communication is encrypted</li>
+<li><strong>Input Validation</strong>: All user inputs are validated and
+sanitized</li>
+<li><strong>SQL Injection Prevention</strong>: Uses parameterized
+queries</li>
+<li><strong>Environment Variables</strong>: Sensitive data stored
+securely</li>
+</ul>
+<h3 id="admin-access-control">Admin Access Control</h3>
+<ul>
+<li><strong>Role-Based Access</strong>: Different permissions for
+members vs admins</li>
+<li><strong>Protected Routes</strong>: Admin pages require
+authentication</li>
+<li><strong>Audit Trail</strong>: Log important administrative
+actions</li>
+</ul>
+<h2 id="notification-system-1">Notification System</h2>
+<h3 id="push-notification-architecture">Push Notification
+Architecture</h3>
+<p>The notification system consists of: 1. <strong>Frontend
+Subscription</strong>: User subscribes to notifications 2.
+<strong>Database Storage</strong>: Subscription details stored securely
+3. <strong>Server-Side Sending</strong>: Server sends notifications via
+Web Push API 4. <strong>Browser Delivery</strong>: Browser displays
+notification to user</p>
+<h3 id="notification-types">Notification Types</h3>
+<ul>
+<li><strong>Boat Reminders</strong>: “Your boat is due back in 30
+minutes”</li>
+<li><strong>Overdue Alerts</strong>: “Boat is overdue, please return
+immediately”</li>
+<li><strong>Maintenance Updates</strong>: “Boat maintenance
+completed”</li>
+<li><strong>Club Announcements</strong>: General club
+communications</li>
+</ul>
+<h3 id="technical-implementation-2">Technical Implementation</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Service Worker - handles incoming notifications</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>self<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;push&#39;</span><span class="op">,</span> <span class="kw">function</span>(<span class="bu">event</span>) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> options <span class="op">=</span> {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">body</span><span class="op">:</span> <span class="bu">event</span><span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">text</span>()<span class="op">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">icon</span><span class="op">:</span> <span class="st">&#39;/icon-192.svg&#39;</span><span class="op">,</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">badge</span><span class="op">:</span> <span class="st">&#39;/icon-192.svg&#39;</span><span class="op">,</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">vibrate</span><span class="op">:</span> [<span class="dv">200</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">200</span>]<span class="op">,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">data</span><span class="op">:</span> {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">dateOfArrival</span><span class="op">:</span> <span class="bu">Date</span><span class="op">.</span><span class="fu">now</span>()<span class="op">,</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">primaryKey</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">event</span><span class="op">.</span><span class="fu">waitUntil</span>(</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    self<span class="op">.</span><span class="at">registration</span><span class="op">.</span><span class="fu">showNotification</span>(<span class="st">&#39;Ymir Sailing Club&#39;</span><span class="op">,</span> options)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<h2 id="multi-language-support">Multi-language Support</h2>
+<h3 id="internationalization-i18n">Internationalization (i18n)</h3>
+<p>The app supports multiple languages through: - <strong>Separate Page
+Routes</strong>: <code>/en/</code> for English, <code>/is/</code> for
+Icelandic - <strong>Language-Specific Content</strong>: Different
+content for each language - <strong>Consistent Navigation</strong>:
+Language switcher in navigation - <strong>Database
+Localization</strong>: Some content stored in multiple languages</p>
+<h3 id="language-implementation">Language Implementation</h3>
+<ul>
+<li><strong>Route-Based</strong>: Different URLs for different
+languages</li>
+<li><strong>Component-Level</strong>: Language-specific components</li>
+<li><strong>Database Queries</strong>: Language-aware data
+retrieval</li>
+<li><strong>User Preferences</strong>: Remember user’s language
+choice</li>
+</ul>
+<h2 id="admin-features">Admin Features</h2>
+<h3 id="admin-dashboard">Admin Dashboard</h3>
+<p>Comprehensive management interface including: - <strong>Member
+Management</strong>: Add, edit, and manage club members - <strong>Boat
+Status Control</strong>: Update boat availability and maintenance status
+- <strong>Usage Analytics</strong>: View boat usage statistics and
+member activity - <strong>Notification Management</strong>: Send
+announcements and manage notifications - <strong>Data Export</strong>:
+Export member and usage data</p>
+<h3 id="administrative-functions">Administrative Functions</h3>
+<ul>
+<li><strong>Member Registration</strong>: Add new members to the
+system</li>
+<li><strong>Boat Maintenance</strong>: Mark boats as under maintenance
+or out of service</li>
+<li><strong>Usage Reports</strong>: Generate reports on boat usage and
+member activity</li>
+<li><strong>System Monitoring</strong>: Monitor system health and
+performance</li>
+</ul>
+<h2 id="mobile-optimization">Mobile Optimization</h2>
+<h3 id="responsive-design">Responsive Design</h3>
+<p>The app is designed mobile-first with: - <strong>Flexible
+Layouts</strong>: Adapts to different screen sizes -
+<strong>Touch-Friendly</strong>: Large buttons and touch targets -
+<strong>Fast Loading</strong>: Optimized for mobile networks -
+<strong>Offline Support</strong>: Works without internet connection</p>
+<h3 id="mobile-specific-features">Mobile-Specific Features</h3>
+<ul>
+<li><strong>QR Code Scanning</strong>: Easy boat checkout via
+camera</li>
+<li><strong>Push Notifications</strong>: Native-like notification
+experience</li>
+<li><strong>App Installation</strong>: Can be installed on home
+screen</li>
+<li><strong>Gesture Support</strong>: Swipe and touch gestures</li>
+</ul>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ul>
+<li><strong>Image Optimization</strong>: Compressed images for faster
+loading</li>
+<li><strong>Code Splitting</strong>: Load only necessary JavaScript</li>
+<li><strong>Caching Strategy</strong>: Aggressive caching for better
+performance</li>
+<li><strong>Lazy Loading</strong>: Load content as needed</li>
+</ul>
+<h2 id="deployment-infrastructure">Deployment &amp; Infrastructure</h2>
+<h3 id="netlify-hosting">Netlify Hosting</h3>
+<p>The app is hosted on Netlify, which provides: - <strong>Global
+CDN</strong>: Fast content delivery worldwide - <strong>Automatic
+Deployments</strong>: Deploy on every Git push - <strong>SSL
+Certificates</strong>: Automatic HTTPS encryption - <strong>Serverless
+Functions</strong>: Backend API endpoints - <strong>Form
+Handling</strong>: Built-in form processing</p>
+<h3 id="database-hosting-neon">Database Hosting (Neon)</h3>
+<p>PostgreSQL database hosted on Neon: - <strong>Managed
+Service</strong>: No server maintenance required - <strong>Automatic
+Backups</strong>: Regular data backups - <strong>Scaling</strong>:
+Automatically scales with usage - <strong>Security</strong>:
+Enterprise-grade security features</p>
+<h3 id="cicd-pipeline">CI/CD Pipeline</h3>
+<p>Continuous Integration and Deployment: 1. <strong>Code Push</strong>:
+Developer pushes code to GitHub 2. <strong>Automatic Build</strong>:
+Netlify builds the application 3. <strong>Testing</strong>: Automated
+tests run (if configured) 4. <strong>Deployment</strong>: Application
+automatically deploys 5. <strong>Monitoring</strong>: Monitor deployment
+success</p>
+<h3 id="environment-management">Environment Management</h3>
+<ul>
+<li><strong>Development</strong>: Local development environment</li>
+<li><strong>Production</strong>: Live application environment</li>
+<li><strong>Environment Variables</strong>: Secure configuration
+management</li>
+<li><strong>Database Migrations</strong>: Automated database
+updates</li>
+</ul>
+<h2 id="potential-future-enhancements">Potential Future
+Enhancements</h2>
+<ul>
+<li><strong>AI chatbot wrapper</strong>: Members can chat with a
+personal AI instructor</li>
+<li><strong>Weather Integration</strong>: Real-time weather data and
+warning alerts when OTW</li>
+<li><strong>Advanced Analytics</strong>: Detailed usage analytics</li>
+<li><strong>Social Features</strong>: Member social interactions -
+enhanced messaging UX, trip planning/group chats, message board</li>
+<li><strong>Maintenance Assignments</strong>: Maintinence
+assigned/credit given to members</li>
+<li><strong>Security</strong>: Enhanced security measures</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Ymir Sailing Club PWA represents a modern approach to club
+management, combining the best of web and mobile technologies to create
+a seamless user experience. Built with scalable, maintainable
+technologies, it provides a solid foundation for future growth and
+feature additions.</p>
+</body>
+</html>
