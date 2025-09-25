@@ -1,7 +1,7 @@
 ---
 title: "Ymir Sailing Club PWA"
 description: "Progressive Web App for boat rental management and member administration at a sailing club in Iceland"
-image: "/images/Ymir_logo.png"
+image: "/images/Ymir_images/Ymir_logo.png"
 weight: 5
 ShowToc: true
 ---
@@ -37,9 +37,9 @@ Developed a comprehensive Progressive Web App (PWA) for the Ymir Sailing Club in
 - **Force Check-In**: Admin capability to handle emergency situations
 - **Maintenance Management**: System for reporting and tracking boat issues
 
-![Admin Dashboard](/images/Ymir_admin_dash.png)
+![Admin Dashboard](/images/Ymir_images/Ymir_admin_dash.png)
 
-![Activity Monitoring](/images/Ymir_actions.png)
+![Activity Monitoring](/images/Ymir_images/Ymir_actions.png)
 
 ## Technical Architecture
 
