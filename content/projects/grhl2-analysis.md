@@ -2,7 +2,7 @@
 title: "GRHL2 DNA Binding Analysis"
 description: "Analysis of Grainyhead-like protein 2 homolog binding patterns using microarray data and unsupervised machine learning techniques"
 image: "/images/grhl2_poster.png"
-weight: 6
+weight: 4
 ShowToc: true
 ---
 
