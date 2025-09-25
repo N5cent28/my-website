@@ -2,7 +2,7 @@
 title: "Ymir Sailing Club PWA"
 description: "Progressive Web App for boat rental management and member administration at a sailing club in Iceland"
 image: "/images/Ymir_images/Ymir_logo.png"
-weight: 5
+weight: 2
 ShowToc: true
 ---
 

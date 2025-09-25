@@ -2,7 +2,7 @@
 title: "NOD2 Expression Analysis in Zebrafish"
 description: "RNA-seq analysis of NOD2 expression levels in zebrafish normoxia replicates compared to housekeeping genes"
 image: "/images/RNA.png"
-weight: 3
+weight: 5
 ShowToc: true
 ---
 
