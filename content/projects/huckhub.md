@@ -2,7 +2,7 @@
 title: "HuckHub - Madison Ultimate Throwing Partner Finder"
 description: "A Progressive Web App connecting Madison's ultimate frisbee community for skill development and community building"
 image: "/images/HHgoldring_thumb.png"
-weight: 1
+weight: 3
 ShowToc: true
 ---
 

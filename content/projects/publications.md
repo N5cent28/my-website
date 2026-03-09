@@ -2,7 +2,7 @@
 title: "Publications"
 description: "Scientific publications in neurodevelopmental biology and cancer genomics, focusing on molecular analysis and bioinformatics."
 image: "/images/Rosettes_x400.png"
-weight: 1
+weight: 2
 ShowToc: true
 ---
 

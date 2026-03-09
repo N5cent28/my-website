@@ -2,7 +2,7 @@
 title: "Statistical Genetics"
 description: "Showcasing projects from human statistical genetics coursework"
 image: "/images/humangenetics.png"
-weight: 5
+weight: 7
 ShowToc: true
 ---
 

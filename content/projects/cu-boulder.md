@@ -2,7 +2,7 @@
 title: "CU Boulder Projects"
 description: "Collection of data science projects completed during my first year of graduate studies at the University of Colorado Boulder"
 image: "/images/CUboulder.jpeg"
-weight: 6
+weight: 8
 ShowToc: true
 ---
 
