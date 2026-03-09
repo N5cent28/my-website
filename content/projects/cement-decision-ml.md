@@ -1,10 +1,11 @@
 ---
 title: "THA Cement Decision ML"
 description: "Machine learning decision-support research for cemented vs non-cemented total hip arthroplasty using CT-derived features"
-image: "/images/THAMLMajorityVote_roc_curves.png"
-weight: 4
+image: "/images/THA_project_cover.gif"
+weight: 0
 ShowToc: true
-website: "https://github.com/N5cent28/the-cement-decision-ml"
+website: "https://www.ru.is/rannsoknarsetur/institute-of-biomedical-and-neural-engineering-ibne-medical-technology-center"
+websiteLabel: "IBNE Team"
 sourceCode: "https://github.com/N5cent28/the-cement-decision-ml"
 ---
 
