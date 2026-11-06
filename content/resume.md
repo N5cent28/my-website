@@ -1,14 +1,9 @@
 ---
 title: "Resume"
 url: "/resume"
+layout: "resume"
 draft: false
-ShowToc: false  
+ShowToc: false
+ShowReadingTime: false
+ShowWordCount: false
 ---
-
-<div class="pdf-container">
-    <iframe src="/documents/resume.pdf" width="100%" height="800px" style="border: none;" title="Resume PDF"></iframe>
-</div>
-
-<div class="pdf-download">
-    <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="project-link">Open PDF in new tab</a>
-</div>

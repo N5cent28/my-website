@@ -1,0 +1,10 @@
+{{- define "main" }}
+<style>:root { --main-width: 960px; }</style>
+<article class="post-single pi">
+    <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+    {{ partial "skills-applied-body.html" . }}
+</article>
+<script src="{{ "js/skills-applied.js" | relURL }}" defer></script>
+{{- end }}

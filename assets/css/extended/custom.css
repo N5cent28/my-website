@@ -493,7 +493,7 @@ h3 {
 .about-image {
     float: right;
     margin: 0 0 1rem 2rem;
-    width: 150px;
+    width: 165px;
 }
 
 .about-image img {
@@ -506,6 +506,15 @@ h3 {
 
 @media (max-width: 768px) {
     .about-image {
-        width: 80px;
+        width: 88px;
     }
 } 
+/* Keep all five menu items reachable on phones (centered + overflow clips the first item) */
+@media (max-width: 768px) {
+    #menu {
+        justify-content: flex-start;
+        gap: 1.25rem;
+        min-width: 0;
+        max-width: 100%;
+    }
+}

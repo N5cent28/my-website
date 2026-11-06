@@ -1,0 +1,778 @@
+
+
+
+  <nav class="filters" aria-label="Filter projects">
+    <div class="filter-row" role="group" aria-label="Category">
+      <span class="filter-label">Show</span>
+      <button class="chip-btn" type="button" id="cat-all" data-cat="all" aria-pressed="true">All</button>
+      <button class="chip-btn" type="button" id="cat-research" data-cat="research" aria-pressed="false">Research &amp; industry</button>
+      <button class="chip-btn" type="button" id="cat-course" data-cat="course" aria-pressed="false">Coursework</button>
+      <button class="chip-btn" type="button" id="cat-solo" data-cat="solo" aria-pressed="false">Solo builds</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Filter by</span>
+      <div class="seg" role="group" aria-label="Filter by">
+        <button class="seg-btn" type="button" id="mode-topic" data-mode="topic" aria-pressed="true">Topic</button>
+        <button class="seg-btn" type="button" id="mode-tool" data-mode="tool" aria-pressed="false">Tool</button>
+      </div>
+    </div>
+    <div class="filter-row" role="group" aria-label="Tools" id="tool-chips" hidden><span class="filter-label" aria-hidden="true"></span></div>
+    <div class="filter-row" role="group" aria-label="Topics" id="topic-chips">
+      <span class="filter-label" aria-hidden="true"></span>
+      <button class="chip-btn" type="button" id="t-all" data-topic="all" aria-pressed="true">Any</button>
+      <button class="chip-btn" type="button" id="t-ml" data-topic="ml" aria-pressed="false">Machine learning</button>
+      <button class="chip-btn" type="button" id="t-dl" data-topic="dl" aria-pressed="false">Deep learning</button>
+      <button class="chip-btn" type="button" id="t-nlp" data-topic="nlp" aria-pressed="false">NLP &amp; LLMs</button>
+      <button class="chip-btn" type="button" id="t-imaging" data-topic="imaging" aria-pressed="false">Imaging</button>
+      <button class="chip-btn" type="button" id="t-genomics" data-topic="genomics" aria-pressed="false">Genomics &amp; sequences</button>
+      <button class="chip-btn" type="button" id="t-pipelines" data-topic="pipelines" aria-pressed="false">Pipelines &amp; QC</button>
+      <button class="chip-btn" type="button" id="t-stats" data-topic="stats" aria-pressed="false">Statistics</button>
+      <button class="chip-btn" type="button" id="t-web" data-topic="web" aria-pressed="false">Full-stack</button>
+      <button class="chip-btn" type="button" id="t-lab" data-topic="lab" aria-pressed="false">Lab science</button>
+    </div>
+    <div class="filter-foot">
+      <p class="count" id="count" aria-live="polite">Showing all projects</p>
+      <button class="text-btn" type="button" id="toggle-all">Expand all</button>
+    </div>
+  </nav>
+
+  <!-- ===================== RESEARCH & INDUSTRY ===================== -->
+  <section class="sec" data-sec="research" aria-labelledby="h-research">
+    <div class="sec-head">
+      <h2 id="h-research">Research &amp; industry</h2>
+      <p>Most recent first. Some work is unpublished or proprietary, so those entries describe methods and scale without results.</p>
+    </div>
+
+    <!-- CLARiTI -->
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>UW Department of Medicine · CLARiTI study</h3><span class="group-when">May 2026 – present</span></div>
+        <p class="group-role">Imaging Programmer Analyst</p>
+        <p class="group-note">CLARiTI is a $150M, NIH-funded, multi-site study on the biology of neurological aging. I lead QC and data validation for the admin team.</p>
+      </div>
+
+      <details class="entry" id="clariti-qc" data-cat="research" data-tags="pipelines imaging stats">
+        <summary><span class="e-when">2026</span><span class="e-main"><span class="e-title">Cross-system QC for multi-site imaging data</span><span class="e-line">Finding and fixing where REDCap patient metadata and the imaging repository disagree.</span></span><span class="e-io">REDCap + LONI → validated records</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I do</h4><ul>
+              <li>Built automated Python QC and sanity-check pipelines that catch integrity problems in incoming site data before they reach manual review.</li>
+              <li>Root-cause mismatches between REDCap metadata and the imaging repository run by USC's Laboratory of Neuro Imaging, separating real data errors from differences in how a site set things up, and reconcile records with SQL.</li>
+              <li>Work through discrepancies directly with local site coordinators, in person and by email.</li>
+              <li>Designed visualization and reporting tools that turn raw imaging metrics into plain-language reports for non-technical site managers.</li>
+              <li>Maintain a repeatable, Git-versioned pipeline that packages quarterly imaging data freezes for industry partners.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>pandas</li><li>SQL</li><li>REDCap</li><li>LONI</li><li>Git</li></ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- IBNE -->
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>Reykjavík University · Institute of Biomedical and Neural Engineering</h3><span class="group-when">Jun 2024 – 2026</span></div>
+        <p class="group-role">Graduate intern, then continuing research collaborator</p>
+        <p class="group-note">Decision support for total hip arthroplasty (THA): should the femoral stem be cemented? I was the technical lead, working with two orthopedic surgeons, a medical graduate, and the institute director.</p>
+      </div>
+
+      <details class="entry" id="tha-segmentation" data-cat="research" data-tags="imaging pipelines">
+        <summary><span class="e-when">2024–25</span><span class="e-main"><span class="e-title">Automated CT femur segmentation and feature extraction</span><span class="e-line">Scripted the Mimics API to turn preoperative CT scans into standardized bone measurements.</span></span><span class="e-io">CT / DICOM → bone features</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Converted raw CT exports to DICOM series and scripted their import, segmentation, and measurement through the Mimics Python API.</li>
+              <li>Automated division of the proximal femur into the seven Gruen zones and computed bone mineral density per zone, using scanner-manufacturer-specific HU-to-BMD calibrations.</li>
+              <li>Measured cortical thickness and area with an 8-direction ray-casting method, cross-checked against a geometric estimate, with automatic part selection by centroid position.</li>
+              <li>Documented the code and workflow so other team members could rerun it on new scans.</li>
+            </ul></div>
+            <p class="result">Processing dropped from about 10 hours to 4 minutes per image, which made a dataset spanning two scanner generations practical to build.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>Mimics API</li><li>DICOM</li><li>NumPy</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="tha-ml" data-cat="research" data-tags="ml imaging stats pipelines">
+        <summary><span class="e-when">2024–26</span><span class="e-main"><span class="e-title">ML decision support for cemented vs. uncemented THA</span><span class="e-line">A leakage-safe modeling pipeline that treats surgeon disagreement as part of the problem.</span></span><span class="e-io">bone features + surgeon votes → fixation</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Built a numbered, script-based workflow from data audit and rater-agreement analysis through training, cross-experiment comparison, feature importance, and reporting.</li>
+              <li>Surgeons often disagreed on the same hip, so I defined five ground truths from three raters (majority vote, operating surgeon, unanimous, two-reviewer agreement, and a soft vote-fraction target) and crossed them with CT-only, CT + demographics, and demographics-only inputs.</li>
+              <li>Kept every hip from a patient in the same split, stratified by label and scanner cohort, and fit KNN imputation and scaling on training data only, separately per cohort.</li>
+              <li>Engineered clinically motivated features (paired-zone BMD averages, BMD-to-cortical ratios, cross-zone summary statistics), growing 13 CT features to 22 inputs.</li>
+              <li>Benchmarked logistic regression, random forest, gradient boosting, and SVM with repeated grouped splits for confidence intervals, plus per-scanner breakdowns to check domain shift.</li>
+              <li>Wrote the methods document and the surgeon re-labeling instructions, and presented results to the clinical team in plain language.</li>
+            </ul></div>
+            <p class="result">CT features carry real signal, but conclusions shift with how ground truth is defined. Manuscript in preparation, so results are not shown here.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>scikit-learn</li><li>pandas</li><li>matplotlib</li><li>Git</li></ul></div>
+            <div><h4>Links</h4><ul class="links">
+              <li><a href="https://github.com/N5cent28/the-cement-decision-ml" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+              <li><a href="https://github.com/N5cent28/the-cement-decision-ml/blob/main/methods.md" target="_blank" rel="noopener noreferrer">Methods</a></li>
+              <li><a href="/projects/cement-decision-ml/" target="_blank" rel="noopener noreferrer">Project page</a></li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Proteovista -->
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>Proteovista LLC</h3><span class="group-when">Jan 2024 – May 2026</span></div>
+        <p class="group-role">Bioinformatics Scientist</p>
+        <p class="group-note">A small biotech building protein–DNA binding arrays and aptamer products. I worked directly with the CTO and wet-lab biologists, took on the hardest programming tasks, and trained senior staff on the tools I built.</p>
+      </div>
+
+      <details class="entry" id="pv-rnaseq" data-cat="research" data-tags="genomics pipelines">
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">RNA-seq expression pipeline</span><span class="e-line">End-to-end bulk RNA-seq workflow from public SRA runs to gene-level expression.</span></span><span class="e-io">FASTQ → FPKM</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Downloaded paired-end replicates of a zebrafish liver cell line with the SRA Toolkit.</li>
+              <li>Ran FastQC and Trimmomatic for quality control and trimming, aligned with HISAT2 to GRCz11, and sorted and indexed with samtools.</li>
+              <li>Counted reads per gene with featureCounts and wrote Python for FPKM, replicate coefficient of variation, and comparisons against housekeeping and inflammatory genes.</li>
+              <li>Documented every software version and parameter so the run could be repeated.</li>
+            </ul></div>
+            <p class="result">The target gene (NOD2) showed moderate, consistent expression across replicates, so the team skipped an intervention to boost it.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>SRA Toolkit</li><li>FastQC</li><li>Trimmomatic</li><li>HISAT2</li><li>samtools</li><li>featureCounts</li><li>pandas</li><li>seaborn</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="/documents/Complete_method.html" target="_blank" rel="noopener noreferrer">Full analysis report</a></li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="pv-grid" data-cat="research" data-tags="imaging pipelines">
+        <summary><span class="e-when">2025–26</span><span class="e-main"><span class="e-title">Microarray grid alignment with computer vision</span><span class="e-line">Replacing manual grid placement in Agilent Feature Extraction with an automated, auditable pipeline.</span></span><span class="e-io">scanner TIFF → grid fit (JSON)</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Stage 1: blur, percentile thresholding, and contour detection locate the feature area in very large multi-page scanner TIFFs.</li>
+              <li>Stage 2: each edge is split into sub-regions, the strongest intensity gradient in each is found, and the results are harmonized into a tight boundary.</li>
+              <li>Stage 3: the expected staggered spot grid (scale, rotation, offset, and row/column indexing) is fit to Hough-detected circles with side-balanced scoring, so no edge gets sacrificed to fit the others.</li>
+              <li>An operator-in-the-loop Streamlit step allows final nudges, then writes a JSON fit artifact and diagnostic overlays for the extraction stage.</li>
+            </ul></div>
+            <p class="result">Turns a slow, operator-dependent GUI task into a batchable, reproducible step with saved diagnostics.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>OpenCV</li><li>NumPy</li><li>SciPy</li><li>tifffile</li><li>Streamlit</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="pv-arrays" data-cat="research" data-tags="pipelines stats">
+        <summary><span class="e-when">2024–25</span><span class="e-main"><span class="e-title">Array normalization, QC, and comparison tooling</span><span class="e-line">Python and Excel VBA that turned raw array output into comparable, reviewable results.</span></span><span class="e-io">array signal → normalized ranks</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Converted replicate signals to z-scores and percentile ranks with outlier filtering, so runs and proteins could be compared on one scale.</li>
+              <li>Compared top and bottom binders across conditions with Venn and UpSet plots, Spearman correlation heatmaps, and box-and-whisker summaries by probe category.</li>
+              <li>Wrote Excel VBA macros for the repetitive processing steps the wet-lab team ran on every scan.</li>
+              <li>Wrote documentation and trained senior staff, then revised the tools based on their feedback.</li>
+            </ul></div>
+            <p class="result">Cut data processing and visualization time by about 90%.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>pandas</li><li>SciPy</li><li>seaborn</li><li>matplotlib-venn</li><li>UpSetPlot</li><li>Excel VBA</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="pv-hairpin" data-cat="research" data-tags="genomics pipelines web">
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Secondary-structure screening dashboard</span><span class="e-line">Automated thermodynamic lookups for large probe sets and packaged them for non-technical review.</span></span><span class="e-io">probe sequences → ΔG gallery</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Automated IDT OligoAnalyzer with Selenium in batched, rate-limited, resumable runs to collect hairpin ΔG values and structure images.</li>
+              <li>Generated a static HTML gallery grouped by probe set, with color-coded ΔG and highlighted subsequences that tolerate mismatches.</li>
+              <li>Paired it with an intensity comparison between two array preparations to test whether hairpins explained an unexpected binding pattern.</li>
+            </ul></div>
+            <p class="result">Leadership could review structure questions on their own, and the gallery became the reference for follow-up experiment decisions.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>Selenium</li><li>pandas</li><li>Pillow</li><li>HTML</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="pv-motifs" data-cat="research" data-tags="genomics stats">
+        <summary><span class="e-when">2024–25</span><span class="e-main"><span class="e-title">Motif and k-mer enrichment analysis</span><span class="e-line">Finding which sequence patterns drive transcription-factor binding on custom arrays.</span></span><span class="e-io">probe intensities → ranked motifs</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Counted n-mers among top-binding probes by region after stripping constant primer sequence, and computed motif-presence statistics.</li>
+              <li>Streamed GRCh38 RefSeq FASTA to count motif occurrences genome-wide, strand-aware, to put array hits in genomic context.</li>
+              <li>Ran de novo motif discovery with STREME and sequence-specificity landscape analysis in GNU Octave, then consolidated pattern results in Python.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>MEME Suite (STREME)</li><li>GNU Octave</li><li>NCBI Datasets</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="pv-oligo" data-cat="research" data-tags="genomics pipelines">
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Oligo design toolkit for DNA assembly</span><span class="e-line">Design rules for splitting long sequences into buildable, non-interfering oligos.</span></span><span class="e-io">target sequence → oligos + barcodes</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Implemented nearest-neighbor melting temperature (with initiation and terminal corrections) and Tm-aware cut-point optimization for overlapping fragments.</li>
+              <li>Generated barcodes from k-mers absent in the target, filtered by Hamming distance and binned by Tm.</li>
+              <li>Screened candidates for repeats, mirror repeats, hairpins, GC-content windows, and purine runs against fabrication criteria, and scraped ΔG values for likely side reactions.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>NumPy</li><li>pandas</li><li>Selenium</li><li>matplotlib</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="pv-grhl2" data-cat="research" data-tags="genomics stats">
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Bioinformatics for a cancer genomics publication</span><span class="e-line">Led the array analysis for a study of GRHL2 overexpression in ER+ breast cancer cells.</span></span><span class="e-io">binding arrays → figures</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Extracted and processed the protein–DNA binding microarray data.</li>
+              <li>Built the computational pipeline and visualizations used to interpret binding results.</li>
+            </ul></div>
+            <p class="result">Co-author, Journal of the Endocrine Society, 2024.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Links</h4><ul class="links"><li><a href="https://doi.org/10.1210/jendso/bvae163.1809" target="_blank" rel="noopener noreferrer">DOI 10.1210/jendso/bvae163.1809</a></li></ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Lu Lab -->
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>Qiongshi Lu Lab, UW–Madison</h3><span class="group-when">Sep 2023 – Mar 2024</span></div>
+        <p class="group-role">Graduate Student Research Assistant</p>
+        <p class="group-note">A statistical genetics lab (developers of PUMAS for polygenic risk score tuning) exploring a move into epigenetic aging clocks.</p>
+      </div>
+
+      <details class="entry" id="lu-clocks" data-cat="research" data-tags="genomics ml stats">
+        <summary><span class="e-when">2023–24</span><span class="e-main"><span class="e-title">Scoping a health-factor epigenetic clock</span><span class="e-line">Literature review and proposal work for a clock trained on health outcomes instead of chronological age.</span></span><span class="e-io">literature + methylation data → plan</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Ran weeks of literature review and presented papers to the PI on biological-age clocks such as DunedinPACE, telomere-based, and sex-specific aging models.</li>
+              <li>Developed the core idea: clocks trained on chronological age are biased toward predicting age, so training on health factors should better capture biological aging.</li>
+              <li>Explored public epigenetic datasets with unsupervised methods to look for structure beyond age.</li>
+              <li>Drafted and submitted the IRB protocol: research plan, data privacy, and consent.</li>
+              <li>Ran the lab's GWAS and polygenic risk score tooling, including an LDpred2-based PRS workflow, to learn its pipelines.</li>
+            </ul></div>
+            <p class="result">The review showed several groups had already built sophisticated versions of this idea. I recommended not duplicating it and moved on.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>R</li><li>LDpred2</li><li>PLINK</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="lu-geo" data-cat="research" data-tags="pipelines genomics">
+        <summary><span class="e-when">2023</span><span class="e-main"><span class="e-title">GEO covariate scraper</span><span class="e-line">Pulled and harmonized sample metadata from Gene Expression Omnibus series with inconsistent formats.</span></span><span class="e-io">GEO series → tidy covariate tables</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Scraped sample pages for methylation series (GSE36054, GSE137222, GSE137223) with requests and BeautifulSoup.</li>
+              <li>Parsed free-text characteristics fields into consistent columns such as age, sex, and tissue, handling both RTF and TXT series exports.</li>
+              <li>Wrote clean per-series CSVs ready to join to methylation matrices.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>requests</li><li>BeautifulSoup</li><li>pandas</li></ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- FCDI -->
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>Fujifilm Cellular Dynamics</h3><span class="group-when">Jun 2022 – Feb 2023</span></div>
+        <p class="group-role">Research Specialist</p>
+        <p class="group-note">iPSC-derived cell products in a design-controlled, regulated environment. I worked daily with senior scientists, cell biologists, quality, and a staff biostatistician.</p>
+      </div>
+
+      <details class="entry" id="fcdi" data-cat="research" data-tags="stats lab genomics">
+        <summary><span class="e-when">2022–23</span><span class="e-main"><span class="e-title">Assay and media validation for iPSC products</span><span class="e-line">Statistical comparisons and characterization data that guided media and assay decisions.</span></span><span class="e-io">flow, qPCR, assay data → reports</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Ran statistical workflows to compare cell-media formulations and assess assay reliability, and presented results to the cross-functional team. Leadership recognized the work as a process improvement.</li>
+              <li>Analyzed flow cytometry and qPCR data to characterize engineered iPSC lines.</li>
+              <li>Designed and checked constructs in DNASTAR for transfection and genetic engineering, and trained in lentiviral methods.</li>
+              <li>Kept data in the LIMS accurate and wrote protocols, SOPs, technical reports, and design-validation documentation.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>DNASTAR</li><li>Flow cytometry</li><li>qPCR</li><li>LIMS</li><li>Excel</li></ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- WID -->
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>Wisconsin Institute for Discovery · Ashton Lab</h3><span class="group-when">Dec 2018 – Mar 2020</span></div>
+        <p class="group-role">Undergraduate Research Assistant</p>
+        <p class="group-note">Regional patterning of human pluripotent stem cells into diverse posterior CNS neurons. This is where I started moving from the pipette to the keyboard.</p>
+      </div>
+
+      <details class="entry" id="wid" data-cat="research" data-tags="lab stats imaging genomics">
+        <summary><span class="e-when">2018–20</span><span class="e-main"><span class="e-title">Quantifying stem-cell neural patterning</span><span class="e-line">qPCR, imaging, and single-cell sequencing data behind a Science Advances paper.</span></span><span class="e-io">cells → qPCR, confocal, scRNA-seq</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Ran qRT-PCR and analyzed regional marker expression with the ΔΔCt method.</li>
+              <li>Performed immunocytochemistry and immunohistochemistry, imaged on a confocal microscope, and quantified marker expression from the images.</li>
+              <li>Prepared samples for single-cell RNA-seq and reviewed downstream marker results with the computational collaborators.</li>
+              <li>Collected experimental data and authored a grant proposal.</li>
+            </ul></div>
+            <p class="result">Co-author, Science Advances, 2022.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>qRT-PCR</li><li>Confocal microscopy</li><li>ICC / IHC</li><li>scRNA-seq</li><li>Excel</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://doi.org/10.1126/sciadv.abn7430" target="_blank" rel="noopener noreferrer">DOI 10.1126/sciadv.abn7430</a></li></ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="group" data-static="true">
+      <div class="group-head"><div class="group-title"><h3>Publications</h3></div></div>
+      <ul class="pubs">
+        <li><span class="e-when">2024</span><span><cite>Genomic Consequences of GRHL2 Overexpression in ER+ Breast Cancer Cells.</cite> Journal of the Endocrine Society. <a href="https://doi.org/10.1210/jendso/bvae163.1809" target="_blank" rel="noopener noreferrer">doi</a></span></li>
+        <li><span class="e-when">2022</span><span><cite>Modular derivation of diverse, regionally discrete human posterior CNS neurons enables discovery of transcriptomic patterns.</cite> Science Advances. <a href="https://doi.org/10.1126/sciadv.abn7430" target="_blank" rel="noopener noreferrer">doi</a></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== COURSEWORK ===================== -->
+  <section class="sec" data-sec="course" aria-labelledby="h-course">
+    <div class="sec-head">
+      <h2 id="h-course">Graduate coursework</h2>
+      <p>Projects and problem sets with real code behind them. Metrics are on the course's held-out test sets.</p>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>UW–Madison · MS Biomedical Data Science</h3><span class="group-when">2024 – 2025</span></div>
+        <p class="group-note">BMI 826 Data Science for Healthcare, BMI 620 Statistics in Human Genetics, CS 760 Machine Learning, BMI 576 Introduction to Bioinformatics, BMI 551 Biostatistics.</p>
+      </div>
+
+      <details class="entry" id="bmi826-xray" data-cat="course" data-tags="dl ml imaging">
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Pneumonia detection from chest X-rays</span><span class="e-line">Elastic net vs. gradient boosting vs. a CNN on 5,840 chest X-rays.</span></span><span class="e-io">X-ray images → pneumonia risk</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Fed flattened 64×64 grayscale pixels to elastic net (ElasticNetCV) and gradient boosting (RandomizedSearchCV) baselines.</li>
+              <li>Built a five-block CNN at 200×200 with augmentation and class weights for the 3:1 class imbalance.</li>
+              <li>Reported test AUC with bootstrap 95% confidence intervals and pairwise significance tests.</li>
+            </ul></div>
+            <p class="result">CNN AUC 0.94, gradient boosting 0.91, elastic net 0.90.</p>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>scikit-learn</li><li>NumPy</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="bmi826-abstracts" data-cat="course" data-tags="nlp ml">
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Classifying PubMed abstract sentences</span><span class="e-line">Labeling each sentence as background, objective, methods, results, or conclusions.</span></span><span class="e-io">210K sentences → section labels</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Built TF-IDF features with stop-word removal and Porter stemming, then cut the vocabulary from 36,192 to 386 terms by document-frequency band once the full vocabulary made training too slow.</li>
+              <li>Trained one-vs-rest elastic net (SGD) and gradient boosting models, tuned on the validation split.</li>
+              <li>Extracted BioBERT sentence embeddings and trained gradient boosting on them.</li>
+            </ul></div>
+            <p class="result">The BioBERT model won on every label, for example 0.974 AUC on Results vs. 0.913 for elastic net.</p>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>NLTK</li><li>Hugging Face Transformers</li><li>BioBERT</li><li>PyTorch</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="bmi826-gusto" data-cat="course" data-tags="ml stats">
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">30-day mortality after heart attack (GUSTO-I)</span><span class="e-line">Clinical risk models validated on a held-out geographic group.</span></span><span class="e-io">trial covariates → mortality risk</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Trained on three sample groups and tested on the held-out "west" group, with about 6% mortality in each.</li>
+              <li>Fit logistic regression, elastic net (cross-validated L1 ratio, saga solver), and a grid-searched random forest on 20 clinical features.</li>
+              <li>Compared AUCs with DeLong tests and checked calibration slope and intercept on the external set.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>pandas</li><li>SciPy</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="bmi826-ts" data-cat="course" data-tags="dl ml stats pipelines">
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Benchmarking clinical time-series forecasting</span><span class="e-line">Final project with Bowman Brown: do deep models beat ARIMA on ICU vitals?</span></span><span class="e-io">vitals and labs → 12-step forecasts</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What we did</h4><ul>
+              <li>Motivated by evidence that deep forecasters often lose to simple baselines on standard benchmarks, and asked whether clinical data changes that.</li>
+              <li>Implemented ARIMA, Holt-Winters, SARIMAX, LSTM, Transformer, and PatchTST behind one command-line runner with configurable window, horizon, models, epochs, and seed.</li>
+              <li>Targeted MIMIC-III and INSPIRE vitals and labs, and developed against synthetic data with the same structure.</li>
+              <li>Scored models on MAE, MSE, RMSE, and MAPE, with comparison plots.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>PyTorch</li><li>statsmodels</li><li>pandas</li><li>argparse</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="bmi620-gwas" data-cat="course" data-tags="genomics stats pipelines">
+        <summary><span class="e-when">BMI 620</span><span class="e-main"><span class="e-title">Schizophrenia GWAS follow-up analysis</span><span class="e-line">PGC3 summary statistics: 2.57M SNPs, 74,776 cases and 101,023 controls.</span></span><span class="e-io">GWAS sumstats → h², r<sub>g</sub>, MR, TWAS</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Wrote a parser for PGC's VCF-like format and applied QC (MAF &gt; 0.01, INFO &gt; 0.3).</li>
+              <li>Produced Manhattan, QQ, and LocusZoom-style plots, and handled genomic-control inflation.</li>
+              <li>Estimated SNP heritability and tissue enrichment with LD Score regression, and genetic correlations with ADHD, PTSD, and cannabis use disorder.</li>
+              <li>Ran bidirectional Mendelian randomization in R and a whole-blood TWAS with GTEx weights.</li>
+            </ul></div>
+            <p class="result">SNP h² of 16.9%, the strongest signal in the MHC region, brain-tissue enrichment, and no strong whole-blood TWAS hits.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>LDSC</li><li>PLINK</li><li>TwoSampleMR</li><li>GTEx</li><li>Python</li><li>R</li></ul></div>
+            <div><h4>Links</h4><ul class="links">
+              <li><a href="/documents/schizophrenia_gwas_analysis_final.html" target="_blank" rel="noopener noreferrer">Analysis report</a></li>
+              <li><a href="https://docs.google.com/presentation/d/100IAKWlIkvZzh4M2jLaCP77u6HMlepmaywGyBiSXcmM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a></li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="cs760" data-cat="course" data-tags="ml dl">
+        <summary><span class="e-when">CS 760</span><span class="e-main"><span class="e-title">Core ML algorithms from scratch</span><span class="e-line">Implemented and stress-tested the classics in NumPy before reaching for libraries.</span></span><span class="e-io">MNIST, email, synthetic → curves</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Decision tree with gain-ratio splits, plotted decision boundaries, and learning curves.</li>
+              <li>k-NN vs. logistic regression on spam email with 5-fold cross-validation and ROC/AUC.</li>
+              <li>A two-layer network with hand-written backprop vs. a PyTorch equivalent on MNIST, comparing weight initializations.</li>
+              <li>k-means from scratch vs. Gaussian mixtures across noise levels.</li>
+              <li>PCA variants (raw, demeaned, normalized, DRO) compared by reconstruction error on 2-D and 1,000-D data.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>NumPy</li><li>PyTorch</li><li>scikit-learn</li><li>matplotlib</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="bmi576" data-cat="course" data-tags="genomics ml">
+        <summary><span class="e-when">BMI 576</span><span class="e-main"><span class="e-title">Bioinformatics algorithms by hand</span><span class="e-line">Assembly, alignment, phylogenetics, HMMs, and Bayesian networks written in Python.</span></span><span class="e-io">FASTA → assemblies, alignments, trees</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Spectral (de Bruijn) genome assembly with Eulerian paths and sequencing-error handling on SARS-CoV-2 reads.</li>
+              <li>Global, local, and affine-gap alignment; BLAST-like seed-and-extend including circular sequences; graph-to-graph alignment.</li>
+              <li>Substitution matrices from human–chimp alignments, multiple alignment, Newick trees, sequence-evolution simulation, and neighbor joining.</li>
+              <li>Markov chains and HMMs (Viterbi, forward, posteriors, parameter estimation), including a protein-domain HMM for coronaviruses.</li>
+              <li>k-means and GMM clustering of expression profiles, and Bayesian network structure scoring and inference.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>Python</li><li>NumPy</li><li>toytree</li></ul></div></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>University of Colorado Boulder · MS Data Science courses</h3><span class="group-when">2023 – 2024</span></div>
+        <p class="group-note">11 graduate credits that transferred into the UW–Madison degree. Public repo: <a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">CUB-Public</a>.</p>
+      </div>
+
+      <details class="entry" id="cu-histo" data-cat="course" data-tags="dl imaging">
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Metastatic tissue detection in pathology patches</span><span class="e-line">A CNN trained on the PatchCamelyon lymph-node benchmark.</span></span><span class="e-io">tissue patches → tumor probability</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Built an image loading and preprocessing pipeline for about 220K labeled patches.</li>
+              <li>Trained and tuned a convolutional network, then analyzed its errors and listed improvements.</li>
+            </ul></div>
+            <p class="result">About 86% validation accuracy.</p>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>NumPy</li><li>Pillow</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-ct" data-cat="course" data-tags="dl imaging">
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Lung cancer type classification from chest CT</span><span class="e-line">Transfer learning with VGG16 across three cancer types and normal tissue.</span></span><span class="e-io">CT slices → 4 classes</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Fine-tuned VGG16 on a small Kaggle CT dataset (adenocarcinoma, large cell, squamous cell, normal).</li>
+              <li>Documented why accuracy plateaued on so little data and laid out next steps: heavier augmentation, cross-validation, and newer architectures.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>VGG16</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-tweets" data-cat="course" data-tags="nlp dl">
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Disaster tweet classification</span><span class="e-line">Linear baselines vs. LSTMs with pretrained word embeddings.</span></span><span class="e-io">tweets → disaster / not</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Cleaned and tokenized tweets, then compared logistic regression baselines with LSTM models using Word2Vec and GloVe Twitter embeddings.</li>
+              <li>Tuned learning rate, batch size, and dropout, and diagnosed why deeper models underperformed the baseline.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>gensim</li><li>NLTK</li><li>scikit-learn</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-gan" data-cat="course" data-tags="dl imaging">
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Generating dog images with a GAN</span><span class="e-line">A generative adversarial network trained on the Stanford Dogs dataset.</span></span><span class="e-io">dog photos → synthetic images</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Built generator and discriminator networks and a custom training loop, tracking both losses over training.</li>
+              <li>Evaluated samples visually and documented the limits of training on local compute.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>NumPy</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-grhl2" data-cat="course" data-tags="ml genomics">
+        <summary><span class="e-when">DTSA 5510</span><span class="e-main"><span class="e-title">Clustering protein–DNA binding sequences</span><span class="e-line">Unsupervised grouping of GRHL2 array probes, linked back to binding strength.</span></span><span class="e-io">probe sequences → clusters + motifs</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Encoded probe sequences, reduced dimensionality, and clustered with k-means.</li>
+              <li>Correlated clusters with measured binding intensity and summarized them with position weight matrices and sequence logos.</li>
+            </ul></div>
+            <p class="result">Clusters tracked binding intensity and suggested GRHL2 recognizes more than one binding sequence.</p>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>Biopython</li><li>pandas</li></ul></div>
+            <div><h4>Links</h4><ul class="links">
+              <li><a href="https://youtu.be/19DapI1pLJw" target="_blank" rel="noopener noreferrer">Presentation video</a></li>
+              <li><a href="/documents/UnsupervisedML_Final.html" target="_blank" rel="noopener noreferrer">Analysis report</a></li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-bbc" data-cat="course" data-tags="nlp ml">
+        <summary><span class="e-when">DTSA 5510</span><span class="e-main"><span class="e-title">Topic discovery and recommenders with matrix factorization</span><span class="e-line">Unsupervised news clustering, a supervised comparison, and an NMF recommender.</span></span><span class="e-io">articles, ratings → topics, predictions</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Clustered BBC news articles with TF-IDF, truncated SVD, and k-means, then compared against supervised logistic regression as training size varied.</li>
+              <li>Built an NMF movie recommender and worked out why treating missing ratings as zeros fails on sparse data.</li>
+              <li>Wrote a PCA class from scratch.</li>
+            </ul></div>
+            <p class="result">About 95% accuracy on news topics without labels.</p>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>NumPy</li><li>pandas</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-revenue" data-cat="course" data-tags="ml">
+        <summary><span class="e-when">DTSA 5509</span><span class="e-main"><span class="e-title">Restaurant revenue prediction</span><span class="e-line">Random forest regression with feature engineering and importance analysis.</span></span><span class="e-io">restaurant attributes → revenue</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Engineered features, handled outliers, and tuned a random forest regressor on a small Kaggle dataset.</li>
+              <li>Ranked feature importance and tested PCA-based feature reduction against the full model.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>pandas</li><li>matplotlib</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://youtu.be/eXRhpUnDQmg" target="_blank" rel="noopener noreferrer">Presentation video</a></li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-rmd" data-cat="course" data-tags="stats">
+        <summary><span class="e-when">DTSA 5301</span><span class="e-main"><span class="e-title">Reproducible public-data reports in R</span><span class="e-line">Seasonal patterns in NYC young-adult shootings, and early COVID-19 deaths.</span></span><span class="e-io">public CSVs → R Markdown reports</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Analyzed NYPD shooting-incident data for seasonal variation among young adults.</li>
+              <li>Analyzed early-pandemic death counts from the Johns Hopkins COVID-19 repository against government control measures.</li>
+              <li>Wrote both as knit-able R Markdown with the data pulled from source, and discussed bias in each.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>R</li><li>tidyverse</li><li>ggplot2</li><li>lubridate</li><li>R Markdown</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="cu-algos" data-cat="course" data-tags="pipelines">
+        <summary><span class="e-when">DTSA 55xx</span><span class="e-main"><span class="e-title">Algorithms, data structures, and SQL</span><span class="e-line">Algorithm design and analysis, plus relational database design and SQL.</span></span><span class="e-io">problems → proofs + Python</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>O(n) maximum subarray, FFT polynomial multiplication, and FFT signal filtering.</li>
+              <li>Dynamic programming (longest stable subsequence), heap-based greedy makespan scheduling with approximation bounds, and SAT solving.</li>
+              <li>Recursive search, sorting, indexing, trees, and graphs.</li>
+              <li>Relational database design and SQL (DTSA 5733, 5734), plus the CS50 SQL problem sets.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>Python</li><li>NumPy</li><li>SQL</li><li>MySQL</li><li>PostgreSQL</li></ul></div></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <div class="group-title"><h3>Other data work</h3></div>
+      </div>
+      <details class="entry" id="alder-mailing" data-cat="course" data-tags="pipelines">
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Campaign mailing list from city parcel records</span><span class="e-line">Turned City of Madison parcel data for Alder District 4 into a unit-level mailing list.</span></span><span class="e-io">683 parcels × 60 fields → mail list</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>What I did</h4><ul>
+              <li>Filtered the district's parcel records down to residential addresses.</li>
+              <li>Expanded multi-unit buildings into apartment-level address lines.</li>
+              <li>Formatted the output for mail merge (address lines, city, state, ZIP).</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>Excel</li><li>Python</li></ul></div></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== SOLO BUILDS ===================== -->
+  <section class="sec" data-sec="solo" aria-labelledby="h-solo">
+    <div class="sec-head">
+      <h2 id="h-solo">Solo builds</h2>
+      <p>Products I scoped, designed, built, and shipped on my own. The matrix shows how far each one has gone through the software lifecycle.</p>
+    </div>
+
+    <div class="matrix-wrap">
+      <table class="sdlc">
+        <caption>Lifecycle coverage by project</caption>
+        <thead>
+          <tr><th scope="col">Project</th><th scope="col">Discover</th><th scope="col">Design</th><th scope="col">Build</th><th scope="col">Test</th><th scope="col">Deploy</th><th scope="col">Operate</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><a href="#ymir">Ymir Safety System</a></th>
+            <td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot part" role="img" aria-label="partial"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot part" role="img" aria-label="partial"></span></td></tr>
+          <tr><th scope="row"><a href="#huckhub">HuckHub</a></th>
+            <td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot part" role="img" aria-label="partial"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td></tr>
+          <tr><th scope="row"><a href="#expertscraper">ExpertScraper</a></th>
+            <td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot part" role="img" aria-label="partial"></span></td></tr>
+          <tr><th scope="row"><a href="#xpath">Xpath</a></th>
+            <td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot part" role="img" aria-label="partial"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td></tr>
+          <tr><th scope="row"><a href="#badgerpark">BadgerPark</a></th>
+            <td><span class="dot full" role="img" aria-label="done"></span></td><td><span class="dot part" role="img" aria-label="partial"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td><td><span class="dot none" role="img" aria-label="not started"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="legend" aria-label="Legend">
+      <li><span class="dot full" aria-hidden="true"></span>done</li>
+      <li><span class="dot part" aria-hidden="true"></span>partly done or manual</li>
+      <li><span class="dot none" aria-hidden="true"></span>not started</li>
+    </ul>
+
+    <div class="group">
+      <details class="entry" id="ymir" data-cat="solo" data-tags="web pipelines">
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Ymir Safety System</span><span class="e-line">Boat checkout and overdue-safety PWA built for a Reykjavík sailing club.</span></span><span class="e-io">QR scan → checkout → overdue alert</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>Lifecycle</h4><ul>
+              <li><strong>Discover:</strong> mapped the club's paper-based checkout and its safety gaps with club leadership.</li>
+              <li><strong>Design:</strong> relational schema for members, boats, check-ins, and maintenance; 3-digit PIN login for dockside phones; per-boat QR codes; English and Icelandic routes.</li>
+              <li><strong>Build:</strong> Astro server rendering with React and Tailwind, Netlify Functions, PostgreSQL, Web Push with VAPID keys, and scheduled overdue checks.</li>
+              <li><strong>Test:</strong> notification test pages, persistent debug logs, and data-consistency scripts; consolidated timezone handling after tracing a class of UTC bugs.</li>
+              <li><strong>Deploy:</strong> migrated SQLite to Neon Postgres and Vercel to Netlify, moved to the club's domain, and regenerated every QR code.</li>
+              <li><strong>Handoff:</strong> delivered as a paid, production-ready app with an admin dashboard and staff guide; 159 commits from July to October 2025.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Astro</li><li>React</li><li>Tailwind</li><li>PostgreSQL</li><li>Netlify</li><li>Web Push</li></ul></div>
+            <div><h4>Links</h4><ul class="links">
+              <li><a href="https://effortless-choux-105f99.netlify.app/en" target="_blank" rel="noopener noreferrer">Live app</a></li>
+              <li><a href="/documents/Ymir_PWA/PWA_FUNCTIONALITY_GUIDE.html" target="_blank" rel="noopener noreferrer">Technical guide</a></li>
+              <li><a href="/projects/ymir-sailing-pwa/" target="_blank" rel="noopener noreferrer">Project page</a></li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="huckhub" data-cat="solo" data-tags="web nlp ml">
+        <summary><span class="e-when">2025–26</span><span class="e-main"><span class="e-title">HuckHub</span><span class="e-line">Throwing-partner matching for Madison's ultimate community, plus a semantic-search careers mode.</span></span><span class="e-io">profiles + location → matches</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>Lifecycle</h4><ul>
+              <li><strong>Discover:</strong> framed the problem with the Madison Ultimate Frisbee Association: new players can't find practice partners between seasons.</li>
+              <li><strong>Design:</strong> vision, safety, and partnership documents; data model with mutual-consent contact sharing.</li>
+              <li><strong>Build:</strong> Next.js 15, React 19, and TypeScript on Supabase Postgres with PostGIS radius matching and row-level security.</li>
+              <li><strong>Test:</strong> TypeScript and ESLint gates on production builds, plus moderation tooling: 18+ verification, reporting, blocking, and bans.</li>
+              <li><strong>Deploy:</strong> Netlify with database migrations; patched Next.js for CVE-2025-55182.</li>
+              <li><strong>Operate:</strong> shipped HuckHub Careers for user testing in June 2026. It runs semantic search over embeddings from ExpertScraper, with user-editable profile overrides and a dispute workflow.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>PostGIS</li><li>Zod</li><li>Netlify</li></ul></div>
+            <div><h4>Links</h4><ul class="links">
+              <li><a href="https://huckhub.netlify.app" target="_blank" rel="noopener noreferrer">Live app</a></li>
+              <li><a href="https://github.com/N5cent28/HuckHub" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+              <li><a href="/projects/huckhub/" target="_blank" rel="noopener noreferrer">Project page</a></li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="expertscraper" data-cat="solo" data-tags="pipelines nlp ml">
+        <summary><span class="e-when">2025–26</span><span class="e-main"><span class="e-title">ExpertScraper</span><span class="e-line">Staged ingestion and LLM-enrichment pipeline linking ultimate players to public career information.</span></span><span class="e-io">rosters + web → profiles + embeddings</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>Lifecycle</h4><ul>
+              <li><strong>Discover:</strong> wrote the purpose document: warm networking through shared community ties, modeled on expert-database work at CROs.</li>
+              <li><strong>Design:</strong> a staged build plan where every stage produces an inspectable artifact and has a pass/fail checklist, and every derived field keeps its source URL and retrieval date.</li>
+              <li><strong>Build:</strong> ingested the UltiVerse API, MUFA, USA Ultimate, and UFA into SQLite with raw dumps for audit; name normalization and de-duplication gave 122K players and 418K player-team-year rows; cached, checkpointed web-context retrieval; LLM profile resolution in cost-capped batches; Sentence Transformers embeddings.</li>
+              <li><strong>Test:</strong> per-stage checklists, de-duplication reports, and a semantic-search smoke test from the CLI.</li>
+              <li><strong>Deploy:</strong> a versioned export bundle (Parquet, NumPy embeddings, manifest) that HuckHub validates and loads.</li>
+              <li><strong>Operate:</strong> incremental enrichment runs about 4% through the dataset; deletion workflow and monitoring are next.</li>
+            </ul></div>
+          </div>
+          <div class="e-col">
+            <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>SQLite</li><li>OpenAI API</li><li>Sentence Transformers</li><li>Parquet</li></ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="entry" id="xpath" data-cat="solo" data-tags="web">
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Xpath (GlobalConnect)</span><span class="e-line">A privacy-first app that tells friends when they're in the same city. No chat, no feed.</span></span><span class="e-io">fuzzed location → nearby alert</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>Lifecycle</h4><ul>
+              <li><strong>Discover:</strong> problem statement and whiteboarding session, plus a competitor analysis against an existing city-level location app.</li>
+              <li><strong>Design:</strong> design document; location fuzzed by up to 1 km before storage, proximity checks every 3 days, and alerts that say only that a connection is nearby.</li>
+              <li><strong>Build (in progress):</strong> a React Native app scaffold and an AWS serverless backend with Cognito, API Gateway, RDS Postgres, an EventBridge schedule, and 10 Lambda functions.</li>
+              <li><strong>Next:</strong> work through the AWS setup tracker and deploy.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>React Native</li><li>TypeScript</li><li>AWS Lambda</li><li>Cognito</li><li>RDS Postgres</li><li>EventBridge</li></ul></div></div>
+        </div>
+      </details>
+
+      <details class="entry" id="badgerpark" data-cat="solo" data-tags="web">
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">BadgerPark</span><span class="e-line">A game-day parking marketplace between Camp Randall fans and nearby residents.</span></span><span class="e-io">listings + bookings → payouts</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <div class="e-body">
+          <div class="e-col">
+            <div><h4>Lifecycle</h4><ul>
+              <li><strong>Discover:</strong> a customer-interest survey for fans and hosts covering price sensitivity, must-have features, and platform.</li>
+              <li><strong>Design (in progress):</strong> a full product spec covering actors and flows, map search, booking holds, payments and payouts, QR/PIN/geofence check-in, anti-circumvention rules, disputes, and host verification.</li>
+              <li><strong>Next:</strong> validate demand from survey responses before building.</li>
+            </ul></div>
+          </div>
+          <div class="e-col"><div><h4>Planned stack</h4><ul class="tools planned"><li>Mobile app</li><li>Stripe Connect</li><li>Maps API</li></ul></div></div>
+        </div>
+      </details>
+    </div>
+  </section>

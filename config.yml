@@ -55,8 +55,10 @@ params:
         url: /about/
       - name: resume
         url: /resume/
-      - name: projects
-        url: /projects
+      - name: portfolio
+        url: /projects/
+      - name: skills applied
+        url: /skills-applied/
       - name: hobbies
         url: /hobbies
 
@@ -78,9 +80,13 @@ menu:
       url: /resume/
       weight: 20
     - identifier: projects
-      name: Projects
+      name: Portfolio
       url: /projects/
       weight: 30
+    - identifier: skills-applied
+      name: Skills Applied
+      url: /skills-applied/
+      weight: 35
     - identifier: hobbies
       name: Hobbies
       url: /hobbies/

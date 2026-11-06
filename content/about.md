@@ -5,7 +5,7 @@ ShowToc: False
 ---
 
 <div class="about-image">
-<img src="/images/profile.jpg" alt="Profile photo" />
+<img src="/images/Ice_man_web.jpg" alt="Noah Nicol" />
 </div>
 
 I've always been fascinated by life in all its forms. Growing up with <a href="https://www.instagram.com/p/DC0QFJAPNJt/?hl=en&img_index=1" target="_blank" rel="noopener noreferrer">more than my fair share of injuries</a>, I developed a firsthand appreciation for human biology and resilience. This curiosity, combined with my love for math and physics, naturally led me to Biomedical Engineering at UW-Madison - a field where I wouldn't have to choose between my varied interests.

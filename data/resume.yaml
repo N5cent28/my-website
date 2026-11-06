@@ -1,0 +1,279 @@
+# Web resume content. The /resume/ page is rendered from this file by layouts/_default/resume.html.
+# To add a job: copy a block under `positions`, keep newest first, and tag it with category ids from `categories`.
+# `related` links accept any URL; /skills-applied/#<id> opens that project row on the Skills Applied page.
+
+summary: "Bioinformatics-trained data engineer with genomics research roots going back to 2018. I turn messy scientific and clinical data into clean, trustworthy, analysis-ready datasets."
+pdf: "/documents/resume.pdf"
+
+categories:
+  - id: data
+    label: "Data & bioinformatics"
+  - id: research
+    label: "Research"
+  - id: software
+    label: "Software"
+  - id: healthcare
+    label: "Healthcare"
+  - id: teaching
+    label: "Teaching & leadership"
+  - id: athletics
+    label: "Athletics"
+
+positions:
+  - id: job-clariti
+    title: "Imaging Programmer Analyst"
+    org: "UW–Madison Department of Medicine · CLARiTI study"
+    place: "Madison, WI · Full-time · Hybrid"
+    when: "May 2026 – Present"
+    cats: [data, research]
+    summary: "Lead QC and data validation for a $150M, NIH-funded, multi-site study on the biology of neurological aging."
+    bullets:
+      - "Lead the QC and validation process for the admin team, reconciling REDCap patient metadata with the imaging repository run by USC's Laboratory of Neuro Imaging and separating real data problems from differences in site setup."
+      - "Built automated Python QC frameworks that flag image failures, missing data, and protocol deviations before they reach manual review."
+      - "Build imaging-data pipelines and Flywheel processing tools for PET, MRI, and multimodal neuroimaging, integrating imaging, clinical, and metadata sources into analysis-ready datasets."
+      - "Package quarterly imaging data freezes and sponsor deliverables for industry partners through a Git-versioned, audit-ready pipeline."
+      - "Built dashboards and Flywheel DataViews for acquisition, processing status, and study completeness, plus plain-language reports for non-technical site managers."
+      - "Work directly with local site coordinators, in person and by email, to root-cause and fix discrepancies."
+    skills: [Python, SQL, REDCap, Flywheel, LONI, Git, PET / MRI]
+    related:
+      - label: "Cross-system QC"
+        url: "/skills-applied/#clariti-qc"
+
+  - id: job-proteovista
+    title: "Bioinformatic Scientist"
+    org: "Proteovista LLC"
+    place: "Madison, WI · Hybrid"
+    when: "Jan 2024 – May 2026"
+    cats: [data, research]
+    summary: "Built the pipelines and analysis tools behind a small biotech's DNA-array, aptamer, and genome-building products."
+    bullets:
+      - "Architected Unix-based Python pipelines that turn raw sequencing and array data into analysis-ready datasets for aptamer discovery and genome-building product design."
+      - "Built RNA-seq, motif-enrichment, and oligo-design workflows with BLAST, SRA Toolkit, HISAT2, and Biopython, drawing on NCBI, UniProt, and the UCSC Genome Browser."
+      - "Automated array QC and visualization in Python and Excel VBA, cutting processing time by about 90%."
+      - "Replaced manual microarray grid alignment with a computer-vision pipeline, and automated web-tool lookups with Selenium."
+      - "Partnered with the CTO on the company's hardest computational tasks and trained senior staff on the tools I built."
+      - "Led the bioinformatics for a cancer genomics publication in the Journal of the Endocrine Society (2024)."
+    skills: [Python, Bash, BLAST, HISAT2, Biopython, OpenCV, Selenium, Excel VBA, Git]
+    related:
+      - label: "RNA-seq pipeline"
+        url: "/skills-applied/#pv-rnaseq"
+      - label: "Microarray grid alignment"
+        url: "/skills-applied/#pv-grid"
+      - label: "Array QC tooling"
+        url: "/skills-applied/#pv-arrays"
+      - label: "Structure screening dashboard"
+        url: "/skills-applied/#pv-hairpin"
+      - label: "Motif analysis"
+        url: "/skills-applied/#pv-motifs"
+      - label: "Oligo design toolkit"
+        url: "/skills-applied/#pv-oligo"
+      - label: "Portfolio: NOD2 expression"
+        url: "/projects/nod2-expression-analysis/"
+
+  - id: job-ibne
+    title: "Graduate Intern, then Post-graduate Intern"
+    org: "Institute of Biomedical and Neural Engineering, Reykjavík University"
+    place: "Reykjavík, Iceland · Hybrid"
+    when: "Jun 2024 – Aug 2025"
+    cats: [data, research]
+    summary: "Technical lead on CT imaging and machine-learning decision support for total hip arthroplasty."
+    bullets:
+      - "Automated femur CT segmentation and feature extraction with the Mimics Scripting API, cutting processing from about 10 hours to 4 minutes per image."
+      - "Built reproducible supervised ML models for cemented vs. uncemented hip-replacement decisions (KNN imputation, scaling, feature engineering, grouped cross-validation)."
+      - "Designed leakage-safe, cohort-aware preprocessing and several ground-truth definitions to handle surgeon disagreement."
+      - "Worked with two orthopedic surgeons, a medical graduate, and the institute director, and wrote R Markdown and HTML guides so the workflow can be reproduced."
+    skills: [Python, scikit-learn, Mimics API, DICOM, pandas, R Markdown]
+    related:
+      - label: "CT segmentation pipeline"
+        url: "/skills-applied/#tha-segmentation"
+      - label: "THA decision-support ML"
+        url: "/skills-applied/#tha-ml"
+      - label: "Portfolio: surgical decision support"
+        url: "/projects/cement-decision-ml/"
+
+  - id: job-lulab
+    title: "Graduate Research Assistant"
+    org: "Qiongshi Lu Lab, UW–Madison Biostatistics"
+    place: "Madison, WI · Part-time · Hybrid"
+    when: "Sep 2023 – Mar 2024"
+    cats: [data, research]
+    summary: "Scoped an epigenetic aging clock trained on health factors rather than chronological age."
+    bullets:
+      - "Reviewed 30+ papers on epigenetics and aging and presented them to the PI to scope the project."
+      - "Built a Python scraper that pulls and harmonizes Gene Expression Omnibus sample covariates for machine learning."
+      - "Applied unsupervised methods to public epigenetic datasets."
+      - "Ran PUMAS polygenic risk score analyses over SSH on UW's HTCondor high-throughput computing system."
+      - "Drafted and submitted the project's IRB protocol."
+    skills: [Python, R, BeautifulSoup, PLINK, HTCondor]
+    related:
+      - label: "Epigenetic clock scoping"
+        url: "/skills-applied/#lu-clocks"
+      - label: "GEO covariate scraper"
+        url: "/skills-applied/#lu-geo"
+
+  - id: job-ymir
+    title: "Freelance Developer"
+    org: "Siglingafélagið Ýmir (Ýmir Sailing Club)"
+    place: "Reykjavík, Iceland · Contract · Remote"
+    when: "Jul 2025 – Oct 2025"
+    cats: [software]
+    summary: "Designed and delivered a paid boat-checkout and safety app for a Reykjavík sailing club."
+    bullets:
+      - "Built a production-ready progressive web app (Astro, React, Tailwind, PostgreSQL) that automates boat checkout, overdue monitoring, fleet status, and maintenance reporting."
+      - "Designed QR-code check-in and check-out, bilingual English/Icelandic screens, UTC-first scheduling, and push notifications."
+      - "Delivered an admin dashboard and staff guide with the finished app."
+    skills: [Astro, React, Tailwind, PostgreSQL, Netlify, Web Push]
+    related:
+      - label: "Ymir Safety System"
+        url: "/skills-applied/#ymir"
+      - label: "Portfolio: Ymir PWA"
+        url: "/projects/ymir-sailing-pwa/"
+
+  - id: job-fcdi
+    title: "Research Specialist I"
+    org: "FUJIFILM Cellular Dynamics"
+    place: "Madison, WI · Full-time"
+    when: "May 2022 – Feb 2023"
+    cats: [research, data]
+    summary: "Developed and validated assays and processes for iPSC-derived cell products in a regulated environment."
+    bullets:
+      - "Used iPSC culture and derivation, transfection, lentiviral transduction, and flow cytometry to support genetic engineering and characterization projects."
+      - "Wrote Python scripts for project data analysis and designed statistical workflows for cell-media validation, confirmed by the in-house biostatistician."
+      - "Analyzed flow cytometry and qPCR data, and designed constructs in DNASTAR."
+      - "Wrote protocols, SOPs, and technical reports to internal and regulatory standards, and kept records accurate in the LIMS."
+    skills: [Python, Flow cytometry, qPCR, DNASTAR, LIMS]
+    related:
+      - label: "Assay and media validation"
+        url: "/skills-applied/#fcdi"
+
+  - id: job-radicals
+    title: "Semi-Professional Athlete"
+    org: "Madison Radicals (professional ultimate frisbee)"
+    place: "Madison, WI · Seasonal"
+    when: "Mar 2019 – Jul 2022"
+    cats: [athletics]
+    summary: "Played for Madison's professional ultimate frisbee team while working and studying full-time."
+    bullets:
+      - "Trained and competed through the summer season, with home games at Breese Stevens Field."
+      - "Balanced the training and travel schedule with full-time work and school."
+
+  - id: job-uwhealth
+    title: "Radiology Technician Assistant (MRI)"
+    org: "UW Health"
+    place: "Madison, WI · Full-time"
+    when: "Jun 2021 – Mar 2022"
+    cats: [healthcare]
+    summary: "Supported MRI patients and technologists from check-in through the exam."
+    bullets:
+      - "Handled patient check-in, exam review, visit preparation, patient education, assistance during exams and procedures, and patient transport."
+      - "Trained on radiographic equipment, imaging software, and Epic."
+    skills: [Epic, Patient care, Spanish]
+
+  - id: job-hoofer
+    title: "Sailing & Windsurfing Instructor"
+    org: "Hoofer Sailing Club"
+    place: "Madison, WI · Seasonal"
+    when: "Jun 2015 – Sep 2021"
+    cats: [teaching]
+    summary: "Taught and led for one of the largest inland sailing clubs in the US."
+    bullets:
+      - "Earned the Lake Leader rating, the club's highest designation of trust, as one of 18 members ever and the youngest windsurfer to receive it."
+      - "Organized recruiting events that introduced hundreds of newcomers to windsurfing, coordinating 3–6 instructors and 20–40 students per lesson."
+      - "Started a sister-club exchange between Madison and Reykjavík."
+      - "Coordinated work sessions and performed equipment repairs."
+    skills: [Instruction, Team leadership, Safety]
+    related:
+      - label: "Ymir Safety System"
+        url: "/skills-applied/#ymir"
+
+  - id: job-covid
+    title: "COVID-19 Health Technician"
+    org: "UW–Madison University Health Services"
+    place: "Madison, WI · Contract"
+    when: "Jan 2021 – Apr 2021"
+    cats: [healthcare]
+    summary: "Ran testing-site operations during the pandemic."
+    bullets:
+      - "Handled sample collection, site setup, patient interaction, and administrative duties, including in Spanish."
+    skills: [Patient care, Spanish]
+
+  - id: job-exact
+    title: "Specimen Processing Associate"
+    org: "Exact Sciences"
+    place: "Madison, WI · Part-time"
+    when: "Jun 2020 – Nov 2020"
+    cats: [healthcare]
+    summary: "Processed patient samples in a high-volume clinical diagnostics lab."
+    bullets:
+      - "Received, accessioned, processed, and stored patient samples."
+      - "Followed laboratory policies and procedures and kept data reporting accurate."
+    skills: [Specimen accessioning, Data entry]
+
+  - id: job-wid
+    title: "Undergraduate Research Assistant"
+    org: "Wisconsin Institute for Discovery · Ashton Lab"
+    place: "Madison, WI · Part-time"
+    when: "Dec 2018 – Mar 2020"
+    cats: [research]
+    summary: "Stem-cell neural patterning research that led to a Science Advances co-authorship."
+    bullets:
+      - "Helped generate dorsal horn interneurons from pluripotent stem cells and studied their regional patterning across CNS tissues."
+      - "Analyzed qRT-PCR with the ΔΔCt method, quantified confocal images in ImageJ/Fiji, and prepared samples for single-cell RNA-seq."
+      - "Collected data independently, wrote a grant proposal, and presented regular research updates."
+      - "Co-authored a 2022 Science Advances paper."
+    skills: [qRT-PCR, Confocal microscopy, ImageJ / Fiji, Cell culture, scRNA-seq]
+    related:
+      - label: "Stem-cell patterning"
+        url: "/skills-applied/#wid"
+      - label: "Portfolio: publications"
+        url: "/projects/publications/"
+
+education:
+  - when: "2024 – 2025"
+    degree: "MS, Biomedical Data Science"
+    school: "University of Wisconsin–Madison"
+    note: "Data Science for Healthcare, Statistics in Human Genetics, Machine Learning (CS 760), Introduction to Bioinformatics, Biostatistics."
+    related:
+      - label: "Coursework projects"
+        url: "/skills-applied/#h-course"
+  - when: "2023 – 2024"
+    degree: "Graduate coursework, MS Data Science"
+    school: "University of Colorado Boulder"
+    note: "11 credits in machine learning, deep learning, algorithms, and databases, transferred into the UW–Madison MS."
+    related:
+      - label: "Portfolio: CU Boulder projects"
+        url: "/projects/cu-boulder/"
+  - when: "2017 – 2022"
+    degree: "BS, Biomedical Engineering; second major in Neurobiology"
+    school: "University of Wisconsin–Madison"
+    note: "Design projects: led a cast-saw prototype that cut blade temperature by 68%; a device to quantify postpartum pelvic instability; a self-healing polymer to reduce air embolism in lung biopsies; neuron differentiation efficiency for implantation studies."
+
+publications:
+  - year: "2024"
+    title: "Genomic Consequences of GRHL2 Overexpression in ER+ Breast Cancer Cells."
+    venue: "Journal of the Endocrine Society"
+    url: "https://doi.org/10.1210/jendso/bvae163.1809"
+  - year: "2022"
+    title: "Modular derivation of diverse, regionally discrete human posterior CNS neurons enables discovery of transcriptomic patterns."
+    venue: "Science Advances"
+    url: "https://doi.org/10.1126/sciadv.abn7430"
+
+skills:
+  - group: "Pipelines & data wrangling"
+    items: "Python (pandas, NumPy), R, Bash, Git; Biopython, BLAST, SRA Toolkit, HISAT2, samtools; Selenium and web scraping"
+  - group: "Statistics & ML"
+    items: "Regression, ANOVA, PCA, clustering; scikit-learn, PyTorch, TensorFlow; GWAS, LD Score regression, Mendelian randomization"
+  - group: "Data quality"
+    items: "Cross-system validation, QC frameworks, REDCap, Flywheel, LIMS, reproducible reporting"
+  - group: "Databases & web"
+    items: "SQL (PostgreSQL, MySQL, SQLite), Supabase, Next.js, Astro, React, AWS basics, Docker basics"
+  - group: "Lab science"
+    items: "iPSC culture, flow cytometry, qPCR, confocal imaging, ICC/IHC, DNASTAR"
+  - group: "Languages"
+    items: "English (native), Spanish"
+
+honors:
+  - "Feldt Scholarship and Nave Scholarship"
+  - "Dean's Honor List, UW–Madison College of Engineering (multiple semesters)"
+  - "Lake Leader rating, Hoofer Sailing Club"
+  - "Athletics: Madison Radicals, UW Hodags club ultimate, UW Crew"

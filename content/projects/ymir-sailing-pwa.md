@@ -9,7 +9,7 @@ ShowToc: true
 ## Project Links
 
 <div class="project-links">
-  <a href="https://siglingafelagidymir.com/en" class="project-link" target="_blank" rel="noopener noreferrer">
+  <a href="https://effortless-choux-105f99.netlify.app/en" class="project-link" target="_blank" rel="noopener noreferrer">
     <span>Live Application</span>
   </a>
   <a href="/documents/Ymir_PWA/PWA_FUNCTIONALITY_GUIDE.html" class="project-link" target="_blank" rel="noopener noreferrer">
@@ -100,7 +100,7 @@ CREATE TABLE boats (
 - `POST /api/check-out` - Check in a boat
 - `POST /api/push-subscription` - Subscribe to notifications
 
-## Project Impact
+## Intended Impact
 
 ### Safety Improvements
 - **Automated Safety Monitoring**: Eliminates manual tracking of boat returns
@@ -137,16 +137,16 @@ CREATE TABLE boats (
 ### Deployment & Infrastructure
 - **Netlify Hosting**: Global CDN with automatic deployments
 - **PostgreSQL Database**: Managed database service with automatic backups
-- **CI/CD Pipeline**: Automated testing and deployment on code changes
+- **CI/CD Pipeline**: Automated builds and deploys on every push
 - **Environment Management**: Secure configuration and environment variables
 
 ## Results & Outcomes
 
-The PWA successfully modernized the sailing club's operations, providing:
-- **Improved Safety**: Automated monitoring prevents boats from being forgotten
-- **Enhanced Efficiency**: Digital system reduces administrative overhead
+I delivered the app to the club as a paid, production-ready system. It is built to provide:
+- **Improved Safety**: Automated monitoring so boats are never forgotten on the water
+- **Enhanced Efficiency**: A digital system in place of paper checkout logs
 - **Better Member Experience**: Easy-to-use mobile interface for boat rentals
-- **Real-Time Visibility**: Club administrators have complete oversight of operations
-- **Scalable Solution**: System can grow with the club's needs
+- **Real-Time Visibility**: Complete oversight of boat activity for club administrators
+- **Scalable Solution**: A design that can grow with the club or be configured for other clubs
 
 This project demonstrates full-stack development skills, real-world problem solving, and the ability to create user-friendly solutions for non-technical users in a professional setting.
