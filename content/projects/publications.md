@@ -47,7 +47,7 @@ Kaelyn O Allen, BS, Christy Zheng, BS, Natalia Solodin, BS, Mary S Ozers, PhD, C
 This study investigates the role of GRHL2, a nuclear transcription factor, in hormone-positive breast cancer progression. Using a tetracycline-inducible MCF7 cell model, the research examines how GRHL2 overexpression affects genomic binding and chromatin landscape changes. The study focuses on understanding GRHL2's potential function as a pioneer factor and its impact on genes associated with cancer metastasis and epithelial-to-mesenchymal transition (EMT).
 
 **My Contribution**:
-Working for Proteovista LLC, I led the bioinformatics analysis, including:
+Working for Proteovista LLC, I supported the bioinformatics analysis, including:
 - Microarray data extraction and processing
 - Creation of data visualizations for analysis
 - Development of computational pipelines for data interpretation

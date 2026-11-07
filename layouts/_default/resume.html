@@ -24,7 +24,7 @@
         </aside>
 
         <div class="group xp-list">
-            {{- range sort $r.positions "start" "desc" }}
+            {{- range sort $r.positions "end" "desc" }}
             {{- $p := . }}
             <details class="entry wide" id="{{ .id }}" data-cats="{{ delimit .cats " " }}">
                 <summary>

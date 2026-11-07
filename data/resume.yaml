@@ -1,5 +1,6 @@
 # Experience page content. The /experience/ page is rendered from this file by layouts/_default/resume.html.
-# To add a job: copy a block under `positions` (any order; `start` as YYYY-MM sorts them newest first), and tag it with category ids from `categories`.
+# To add a job: copy a block under `positions` in any order. `end` (YYYY-MM, or 9999-12 for current) sorts them, most recent first.
+# `when` is the date text people see; keep it in sync with `end`. and tag it with category ids from `categories`.
 # `related` links accept any URL; /skills-applied/#<id> opens that project row on the Skills Applied page.
 
 pdf: "/documents/resume.pdf"
@@ -18,7 +19,7 @@ categories:
 
 positions:
   - id: job-clariti
-    start: "2026-05"
+    end: "9999-12"
     title: "Imaging Programmer Analyst"
     org: "UW–Madison Department of Medicine · CLARiTI study"
     place: "Madison, WI · Full-time · Hybrid"
@@ -38,7 +39,7 @@ positions:
         url: "/skills-applied/#clariti-qc"
 
   - id: job-proteovista
-    start: "2024-01"
+    end: "2026-05"
     title: "Bioinformatic Scientist"
     org: "Proteovista LLC"
     place: "Madison, WI · Hybrid"
@@ -51,7 +52,7 @@ positions:
       - "Automated array QC and visualization in Python and Excel VBA, cutting processing time by about 90%."
       - "Replaced manual microarray grid alignment with a computer-vision pipeline, and automated web-tool lookups with Selenium."
       - "Partnered with the CTO on the company's hardest computational tasks and trained senior staff on the tools I built."
-      - "Led the bioinformatics for a cancer genomics publication in the Journal of the Endocrine Society (2024)."
+      - "Supported the bioinformatics for a cancer genomics publication in the Journal of the Endocrine Society (2024)."
     skills: [Python, Bash, BLAST, HISAT2, Biopython, OpenCV, Selenium, Excel VBA, Git]
     related:
       - label: "RNA-seq pipeline"
@@ -70,11 +71,11 @@ positions:
         url: "/projects/nod2-expression-analysis/"
 
   - id: job-ibne
-    start: "2024-06"
-    title: "Graduate Intern, then Post-graduate Intern"
+    end: "2024-12"
+    title: "Intern"
     org: "Institute of Biomedical and Neural Engineering, Reykjavík University"
     place: "Reykjavík, Iceland · Hybrid"
-    when: "Jun 2024 – Aug 2025"
+    when: "Jun 2024 – Dec 2024"
     cats: [data, research]
     summary: "Technical lead on CT imaging and machine-learning decision support for total hip arthroplasty."
     bullets:
@@ -92,7 +93,7 @@ positions:
         url: "/projects/cement-decision-ml/"
 
   - id: job-lulab
-    start: "2023-09"
+    end: "2024-03"
     title: "Graduate Research Assistant"
     org: "Qiongshi Lu Lab, UW–Madison Biostatistics"
     place: "Madison, WI · Part-time · Hybrid"
@@ -113,7 +114,7 @@ positions:
         url: "/skills-applied/#lu-geo"
 
   - id: job-ymir
-    start: "2025-07"
+    end: "2025-10"
     title: "Freelance Developer"
     org: "Siglingafélagið Ýmir (Ýmir Sailing Club)"
     place: "Reykjavík, Iceland · Contract · Remote"
@@ -132,7 +133,7 @@ positions:
         url: "/projects/ymir-sailing-pwa/"
 
   - id: job-fcdi
-    start: "2022-05"
+    end: "2023-02"
     title: "Research Specialist I"
     org: "FUJIFILM Cellular Dynamics"
     place: "Madison, WI · Full-time"
@@ -150,7 +151,7 @@ positions:
         url: "/skills-applied/#fcdi"
 
   - id: job-radicals
-    start: "2019-03"
+    end: "2022-07"
     title: "Semi-Professional Athlete"
     org: "Madison Radicals (professional ultimate frisbee)"
     place: "Madison, WI · Seasonal"
@@ -162,7 +163,7 @@ positions:
       - "Balanced the training and travel schedule with full-time work and school."
 
   - id: job-uwhealth
-    start: "2021-06"
+    end: "2022-03"
     title: "Radiology Technician Assistant (MRI)"
     org: "UW Health"
     place: "Madison, WI · Full-time"
@@ -175,7 +176,7 @@ positions:
     skills: [Epic, Patient care, Spanish]
 
   - id: job-hoofer
-    start: "2015-06"
+    end: "2021-09"
     title: "Sailing & Windsurfing Instructor"
     org: "Hoofer Sailing Club"
     place: "Madison, WI · Seasonal"
@@ -193,7 +194,7 @@ positions:
         url: "/skills-applied/#ymir"
 
   - id: job-covid
-    start: "2021-01"
+    end: "2021-04"
     title: "COVID-19 Health Technician"
     org: "UW–Madison University Health Services"
     place: "Madison, WI · Contract"
@@ -205,7 +206,7 @@ positions:
     skills: [Patient care, Spanish]
 
   - id: job-exact
-    start: "2020-06"
+    end: "2020-11"
     title: "Specimen Processing Associate"
     org: "Exact Sciences"
     place: "Madison, WI · Part-time"
@@ -218,7 +219,7 @@ positions:
     skills: [Specimen accessioning, Data entry]
 
   - id: job-wid
-    start: "2018-12"
+    end: "2020-03"
     title: "Undergraduate Research Assistant"
     org: "Wisconsin Institute for Discovery · Ashton Lab"
     place: "Madison, WI · Part-time"
@@ -239,13 +240,13 @@ positions:
 
 
   - id: edu-ms
-    start: "2024-09"
+    end: "2025-08"
     title: "MS, Biomedical Data Science"
     org: "University of Wisconsin–Madison"
     place: "Madison, WI"
     when: "Sep 2024 – Aug 2025"
     cats: [education]
-    summary: "Graduate degree in biomedical data science."
+    summary: "Finished my master's here after transferring in from CU Boulder's MS in Data Science."
     bullets:
       - "Coursework: Data Science for Healthcare, Statistics in Human Genetics, Machine Learning (CS 760), Introduction to Bioinformatics, Biostatistics."
       - "Independent study on CT-based machine learning for hip-replacement decision support."
@@ -256,13 +257,13 @@ positions:
         url: "/projects/statistical-genetics/"
 
   - id: edu-cu
-    start: "2023-06"
-    title: "Graduate coursework, MS Data Science"
+    end: "2024-08"
+    title: "MS Data Science (transferred to UW–Madison)"
     org: "University of Colorado Boulder"
     place: "Online"
     when: "Jun 2023 – Aug 2024"
     cats: [education]
-    summary: "11 graduate credits that transferred into the UW–Madison MS."
+    summary: "Started my master's here online, then transferred 11 graduate credits into UW–Madison's MS in Biomedical Data Science."
     bullets:
       - "Machine learning (supervised and unsupervised), deep learning, algorithms, relational databases, SQL, and data visualization."
     related:
@@ -270,7 +271,7 @@ positions:
         url: "/projects/cu-boulder/"
 
   - id: edu-bs
-    start: "2017-09"
+    end: "2022-05"
     title: "BS, Biomedical Engineering; second major in Neurobiology"
     org: "University of Wisconsin–Madison"
     place: "Madison, WI"
@@ -284,7 +285,7 @@ positions:
       - "Studied neuron differentiation efficiency for implantation experiments."
 
   - id: job-graze
-    start: "2018-05"
+    end: "2018-08"
     title: "Food Server"
     org: "Graze"
     place: "Madison, WI · Seasonal"
@@ -295,7 +296,7 @@ positions:
       - "Trained as a bar back, food runner, and host."
 
   - id: job-limnology
-    start: "2016-06"
+    end: "2016-09"
     title: "Summer Intern"
     org: "UW–Madison Center for Limnology"
     place: "Madison, WI · Internship"
@@ -307,7 +308,7 @@ positions:
       - "Ran an independent project on the daily vertical migration of spiny water fleas, an invasive species that degrades water quality in Madison's lakes."
 
   - id: job-ice
-    start: "2015-10"
+    end: "2015-12"
     title: "Ice Skating Instructor"
     org: "Madison Ice Arena"
     place: "Madison, WI · Part-time"
