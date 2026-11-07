@@ -1,6 +1,7 @@
 ---
-title: "Resume"
-url: "/resume"
+title: "Experience"
+url: "/experience/"
+aliases: ["/resume/"]
 layout: "resume"
 draft: false
 ShowToc: false

@@ -1,43 +1,30 @@
 {{- define "main" }}
 {{- $r := site.Data.resume }}
 {{- $cats := $r.categories }}
-<style>:root { --main-width: 960px; }</style>
+<style>:root { --main-width: 1024px; }</style>
 <article class="post-single pi pi-resume">
     <header class="post-header">
         <h1 class="post-title">{{ .Title }}</h1>
     </header>
 
-    <div style="display: grid; gap: 1rem;">
-        <p class="pi-lede">{{ $r.summary }}</p>
-        <div class="pi-actions">
-            <a class="pi-btn primary" href="{{ $r.pdf }}" download>Download PDF resume</a>
-            <a class="pi-btn" href="{{ $r.pdf }}" target="_blank" rel="noopener noreferrer">View PDF</a>
-            <a class="pi-btn" href="/skills-applied/">Skills Applied</a>
-        </div>
-    </div>
-
-    <section class="sec" aria-labelledby="h-experience">
-        <div class="sec-head">
-            <h2 id="h-experience">Experience</h2>
-            <p>Every position, newest first. Open a row for details and links to related projects.</p>
-        </div>
-
-        <nav class="filters" aria-label="Filter positions">
-            <div class="filter-row" role="group" aria-label="Category">
-                <span class="filter-label">Show</span>
-                <button class="chip-btn" type="button" id="rcat-all" data-rcat="all" aria-pressed="true">All<span class="n"></span></button>
-                {{- range $cats }}
-                <button class="chip-btn" type="button" id="rcat-{{ .id }}" data-rcat="{{ .id }}" aria-pressed="false">{{ .label }}<span class="n"></span></button>
-                {{- end }}
-            </div>
-            <div class="filter-foot">
+    <div class="xp-layout">
+        <aside class="xp-side">
+            <nav class="filters xp-filters" aria-label="Filter experience">
+                <div class="filter-row" role="group" aria-label="Category">
+                    <span class="filter-label">Show</span>
+                    <button class="chip-btn" type="button" id="rcat-all" data-rcat="all" aria-pressed="true">All<span class="n"></span></button>
+                    {{- range $cats }}
+                    <button class="chip-btn" type="button" id="rcat-{{ .id }}" data-rcat="{{ .id }}" aria-pressed="false">{{ .label }}<span class="n"></span></button>
+                    {{- end }}
+                </div>
                 <p class="count" id="rcount" aria-live="polite"></p>
                 <button class="text-btn" type="button" id="rtoggle-all">Expand all</button>
-            </div>
-        </nav>
+                <a class="pi-btn" href="{{ $r.pdf }}" target="_blank" rel="noopener noreferrer">View PDF resume</a>
+            </nav>
+        </aside>
 
-        <div class="group">
-            {{- range $r.positions }}
+        <div class="group xp-list">
+            {{- range sort $r.positions "start" "desc" }}
             {{- $p := . }}
             <details class="entry wide" id="{{ .id }}" data-cats="{{ delimit .cats " " }}">
                 <summary>
@@ -54,7 +41,7 @@
                 <div class="e-body">
                     <div class="e-col">
                         <p>{{ .summary }}</p>
-                        <div><h4>What I did</h4><ul>
+                        <div><h4>Details</h4><ul>
                             {{- range .bullets }}<li>{{ . | markdownify }}</li>{{ end }}
                         </ul></div>
                         {{- with .related }}
@@ -73,46 +60,7 @@
             </details>
             {{- end }}
         </div>
-    </section>
-
-    <section class="sec" aria-labelledby="h-education">
-        <div class="sec-head"><h2 id="h-education">Education</h2></div>
-        <ul class="pubs" style="--when-w: 9.5rem;">
-            {{- range $r.education }}
-            <li>
-                <span class="e-when">{{ .when }}</span>
-                <span style="display: grid; gap: 0.3rem;">
-                    <span><span class="e-title">{{ .degree }}</span><br><span class="e-line">{{ .school }}</span></span>
-                    {{- with .note }}<span>{{ . }}</span>{{ end }}
-                    {{- with .related }}<ul class="related">{{ range . }}<li><a href="{{ .url }}">{{ .label }}</a></li>{{ end }}</ul>{{ end }}
-                </span>
-            </li>
-            {{- end }}
-        </ul>
-    </section>
-
-    <section class="sec" aria-labelledby="h-pubs">
-        <div class="sec-head"><h2 id="h-pubs">Publications</h2></div>
-        <ul class="pubs" style="--when-w: 9.5rem;">
-            {{- range $r.publications }}
-            <li><span class="e-when">{{ .year }}</span><span><cite>{{ .title }}</cite> {{ .venue }}. <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">doi</a></span></li>
-            {{- end }}
-        </ul>
-    </section>
-
-    <section class="sec" aria-labelledby="h-skills">
-        <div class="sec-head"><h2 id="h-skills">Skills</h2></div>
-        <dl class="kv">
-            {{- range $r.skills }}<dt>{{ .group }}</dt><dd>{{ .items }}</dd>{{ end }}
-        </dl>
-    </section>
-
-    <section class="sec" aria-labelledby="h-honors">
-        <div class="sec-head"><h2 id="h-honors">Honors &amp; activities</h2></div>
-        <ul class="tools">
-            {{- range $r.honors }}<li>{{ . }}</li>{{ end }}
-        </ul>
-    </section>
+    </div>
 </article>
 <script src="{{ "js/resume.js" | relURL }}" defer></script>
 {{- end }}

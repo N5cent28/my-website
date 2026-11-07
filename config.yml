@@ -53,8 +53,8 @@ params:
     buttons:
       - name: about
         url: /about/
-      - name: resume
-        url: /resume/
+      - name: experience
+        url: /experience/
       - name: portfolio
         url: /projects/
       - name: skills applied
@@ -76,8 +76,8 @@ menu:
       url: /about/
       weight: 10
     - identifier: resume
-      name: Resume
-      url: /resume/
+      name: Experience
+      url: /experience/
       weight: 20
     - identifier: projects
       name: Portfolio

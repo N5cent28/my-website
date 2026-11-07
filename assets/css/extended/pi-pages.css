@@ -188,3 +188,19 @@ body.dark .pi {
 .pi .e-body { line-height: 1.6; }
 .pi, .pi .sec, .pi .group { grid-template-columns: minmax(0, 1fr); }
 .pi > *, .pi .sec > *, .pi .group > * { min-width: 0; }
+
+/* Experience page: sticky filter sidebar on wide screens */
+.pi .xp-layout { display: grid; grid-template-columns: 13.75rem minmax(0, 1fr); gap: 2.25rem; align-items: start; }
+.pi .xp-side { position: sticky; top: 1.5rem; }
+.pi .xp-filters { border-top: 0; padding-top: 0; gap: 0.9rem; justify-items: start; }
+.pi .xp-filters .filter-row { flex-direction: column; align-items: flex-start; }
+.pi .xp-filters .filter-label { width: auto; }
+.pi .xp-list .e-body { margin-left: 0; }
+@media (max-width: 860px) {
+  .pi .xp-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .pi .xp-side { position: static; }
+  .pi .xp-filters { border-bottom: 1px solid var(--line); }
+  .pi .xp-filters .filter-row { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .pi .xp-filters .filter-label { width: 100%; }
+}
+.pi .xp-filters .chip-btn { white-space: nowrap; }

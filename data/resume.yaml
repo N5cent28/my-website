@@ -1,26 +1,24 @@
-# Web resume content. The /resume/ page is rendered from this file by layouts/_default/resume.html.
-# To add a job: copy a block under `positions`, keep newest first, and tag it with category ids from `categories`.
+# Experience page content. The /experience/ page is rendered from this file by layouts/_default/resume.html.
+# To add a job: copy a block under `positions` (any order; `start` as YYYY-MM sorts them newest first), and tag it with category ids from `categories`.
 # `related` links accept any URL; /skills-applied/#<id> opens that project row on the Skills Applied page.
 
-summary: "Bioinformatics-trained data engineer with genomics research roots going back to 2018. I turn messy scientific and clinical data into clean, trustworthy, analysis-ready datasets."
 pdf: "/documents/resume.pdf"
 
 categories:
+  - id: education
+    label: "Education"
   - id: data
     label: "Data & bioinformatics"
   - id: research
     label: "Research"
-  - id: software
-    label: "Software"
   - id: healthcare
     label: "Healthcare"
-  - id: teaching
-    label: "Teaching & leadership"
-  - id: athletics
-    label: "Athletics"
+  - id: other
+    label: "Other"
 
 positions:
   - id: job-clariti
+    start: "2026-05"
     title: "Imaging Programmer Analyst"
     org: "UW–Madison Department of Medicine · CLARiTI study"
     place: "Madison, WI · Full-time · Hybrid"
@@ -40,6 +38,7 @@ positions:
         url: "/skills-applied/#clariti-qc"
 
   - id: job-proteovista
+    start: "2024-01"
     title: "Bioinformatic Scientist"
     org: "Proteovista LLC"
     place: "Madison, WI · Hybrid"
@@ -71,6 +70,7 @@ positions:
         url: "/projects/nod2-expression-analysis/"
 
   - id: job-ibne
+    start: "2024-06"
     title: "Graduate Intern, then Post-graduate Intern"
     org: "Institute of Biomedical and Neural Engineering, Reykjavík University"
     place: "Reykjavík, Iceland · Hybrid"
@@ -92,6 +92,7 @@ positions:
         url: "/projects/cement-decision-ml/"
 
   - id: job-lulab
+    start: "2023-09"
     title: "Graduate Research Assistant"
     org: "Qiongshi Lu Lab, UW–Madison Biostatistics"
     place: "Madison, WI · Part-time · Hybrid"
@@ -112,11 +113,12 @@ positions:
         url: "/skills-applied/#lu-geo"
 
   - id: job-ymir
+    start: "2025-07"
     title: "Freelance Developer"
     org: "Siglingafélagið Ýmir (Ýmir Sailing Club)"
     place: "Reykjavík, Iceland · Contract · Remote"
     when: "Jul 2025 – Oct 2025"
-    cats: [software]
+    cats: [other]
     summary: "Designed and delivered a paid boat-checkout and safety app for a Reykjavík sailing club."
     bullets:
       - "Built a production-ready progressive web app (Astro, React, Tailwind, PostgreSQL) that automates boat checkout, overdue monitoring, fleet status, and maintenance reporting."
@@ -130,6 +132,7 @@ positions:
         url: "/projects/ymir-sailing-pwa/"
 
   - id: job-fcdi
+    start: "2022-05"
     title: "Research Specialist I"
     org: "FUJIFILM Cellular Dynamics"
     place: "Madison, WI · Full-time"
@@ -147,17 +150,19 @@ positions:
         url: "/skills-applied/#fcdi"
 
   - id: job-radicals
+    start: "2019-03"
     title: "Semi-Professional Athlete"
     org: "Madison Radicals (professional ultimate frisbee)"
     place: "Madison, WI · Seasonal"
     when: "Mar 2019 – Jul 2022"
-    cats: [athletics]
+    cats: [other]
     summary: "Played for Madison's professional ultimate frisbee team while working and studying full-time."
     bullets:
       - "Trained and competed through the summer season, with home games at Breese Stevens Field."
       - "Balanced the training and travel schedule with full-time work and school."
 
   - id: job-uwhealth
+    start: "2021-06"
     title: "Radiology Technician Assistant (MRI)"
     org: "UW Health"
     place: "Madison, WI · Full-time"
@@ -170,11 +175,12 @@ positions:
     skills: [Epic, Patient care, Spanish]
 
   - id: job-hoofer
+    start: "2015-06"
     title: "Sailing & Windsurfing Instructor"
     org: "Hoofer Sailing Club"
     place: "Madison, WI · Seasonal"
     when: "Jun 2015 – Sep 2021"
-    cats: [teaching]
+    cats: [other]
     summary: "Taught and led for one of the largest inland sailing clubs in the US."
     bullets:
       - "Earned the Lake Leader rating, the club's highest designation of trust, as one of 18 members ever and the youngest windsurfer to receive it."
@@ -187,6 +193,7 @@ positions:
         url: "/skills-applied/#ymir"
 
   - id: job-covid
+    start: "2021-01"
     title: "COVID-19 Health Technician"
     org: "UW–Madison University Health Services"
     place: "Madison, WI · Contract"
@@ -198,6 +205,7 @@ positions:
     skills: [Patient care, Spanish]
 
   - id: job-exact
+    start: "2020-06"
     title: "Specimen Processing Associate"
     org: "Exact Sciences"
     place: "Madison, WI · Part-time"
@@ -210,6 +218,7 @@ positions:
     skills: [Specimen accessioning, Data entry]
 
   - id: job-wid
+    start: "2018-12"
     title: "Undergraduate Research Assistant"
     org: "Wisconsin Institute for Discovery · Ashton Lab"
     place: "Madison, WI · Part-time"
@@ -228,52 +237,82 @@ positions:
       - label: "Portfolio: publications"
         url: "/projects/publications/"
 
-education:
-  - when: "2024 – 2025"
-    degree: "MS, Biomedical Data Science"
-    school: "University of Wisconsin–Madison"
-    note: "Data Science for Healthcare, Statistics in Human Genetics, Machine Learning (CS 760), Introduction to Bioinformatics, Biostatistics."
+
+  - id: edu-ms
+    start: "2024-09"
+    title: "MS, Biomedical Data Science"
+    org: "University of Wisconsin–Madison"
+    place: "Madison, WI"
+    when: "Sep 2024 – Aug 2025"
+    cats: [education]
+    summary: "Graduate degree in biomedical data science."
+    bullets:
+      - "Coursework: Data Science for Healthcare, Statistics in Human Genetics, Machine Learning (CS 760), Introduction to Bioinformatics, Biostatistics."
+      - "Independent study on CT-based machine learning for hip-replacement decision support."
     related:
       - label: "Coursework projects"
         url: "/skills-applied/#h-course"
-  - when: "2023 – 2024"
-    degree: "Graduate coursework, MS Data Science"
-    school: "University of Colorado Boulder"
-    note: "11 credits in machine learning, deep learning, algorithms, and databases, transferred into the UW–Madison MS."
+      - label: "Portfolio: statistical genetics"
+        url: "/projects/statistical-genetics/"
+
+  - id: edu-cu
+    start: "2023-06"
+    title: "Graduate coursework, MS Data Science"
+    org: "University of Colorado Boulder"
+    place: "Online"
+    when: "Jun 2023 – Aug 2024"
+    cats: [education]
+    summary: "11 graduate credits that transferred into the UW–Madison MS."
+    bullets:
+      - "Machine learning (supervised and unsupervised), deep learning, algorithms, relational databases, SQL, and data visualization."
     related:
       - label: "Portfolio: CU Boulder projects"
         url: "/projects/cu-boulder/"
-  - when: "2017 – 2022"
-    degree: "BS, Biomedical Engineering; second major in Neurobiology"
-    school: "University of Wisconsin–Madison"
-    note: "Design projects: led a cast-saw prototype that cut blade temperature by 68%; a device to quantify postpartum pelvic instability; a self-healing polymer to reduce air embolism in lung biopsies; neuron differentiation efficiency for implantation studies."
 
-publications:
-  - year: "2024"
-    title: "Genomic Consequences of GRHL2 Overexpression in ER+ Breast Cancer Cells."
-    venue: "Journal of the Endocrine Society"
-    url: "https://doi.org/10.1210/jendso/bvae163.1809"
-  - year: "2022"
-    title: "Modular derivation of diverse, regionally discrete human posterior CNS neurons enables discovery of transcriptomic patterns."
-    venue: "Science Advances"
-    url: "https://doi.org/10.1126/sciadv.abn7430"
+  - id: edu-bs
+    start: "2017-09"
+    title: "BS, Biomedical Engineering; second major in Neurobiology"
+    org: "University of Wisconsin–Madison"
+    place: "Madison, WI"
+    when: "Sep 2017 – May 2022"
+    cats: [education]
+    summary: "Engineering design training alongside neuroscience coursework."
+    bullets:
+      - "Led a cast-saw design team whose prototype cut blade temperature by 68%."
+      - "Designed a device to quantify postpartum pelvic instability."
+      - "Worked on a self-healing polymer to reduce air embolism during lung biopsies."
+      - "Studied neuron differentiation efficiency for implantation experiments."
 
-skills:
-  - group: "Pipelines & data wrangling"
-    items: "Python (pandas, NumPy), R, Bash, Git; Biopython, BLAST, SRA Toolkit, HISAT2, samtools; Selenium and web scraping"
-  - group: "Statistics & ML"
-    items: "Regression, ANOVA, PCA, clustering; scikit-learn, PyTorch, TensorFlow; GWAS, LD Score regression, Mendelian randomization"
-  - group: "Data quality"
-    items: "Cross-system validation, QC frameworks, REDCap, Flywheel, LIMS, reproducible reporting"
-  - group: "Databases & web"
-    items: "SQL (PostgreSQL, MySQL, SQLite), Supabase, Next.js, Astro, React, AWS basics, Docker basics"
-  - group: "Lab science"
-    items: "iPSC culture, flow cytometry, qPCR, confocal imaging, ICC/IHC, DNASTAR"
-  - group: "Languages"
-    items: "English (native), Spanish"
+  - id: job-graze
+    start: "2018-05"
+    title: "Food Server"
+    org: "Graze"
+    place: "Madison, WI · Seasonal"
+    when: "May 2018 – Aug 2018"
+    cats: [other]
+    summary: "Summer restaurant work on the Capitol Square."
+    bullets:
+      - "Trained as a bar back, food runner, and host."
 
-honors:
-  - "Feldt Scholarship and Nave Scholarship"
-  - "Dean's Honor List, UW–Madison College of Engineering (multiple semesters)"
-  - "Lake Leader rating, Hoofer Sailing Club"
-  - "Athletics: Madison Radicals, UW Hodags club ultimate, UW Crew"
+  - id: job-limnology
+    start: "2016-06"
+    title: "Summer Intern"
+    org: "UW–Madison Center for Limnology"
+    place: "Madison, WI · Internship"
+    when: "Jun 2016 – Sep 2016"
+    cats: [other]
+    summary: "Lake ecology research internship during high school."
+    bullets:
+      - "Helped with field data collection and processing 20 hours a week."
+      - "Ran an independent project on the daily vertical migration of spiny water fleas, an invasive species that degrades water quality in Madison's lakes."
+
+  - id: job-ice
+    start: "2015-10"
+    title: "Ice Skating Instructor"
+    org: "Madison Ice Arena"
+    place: "Madison, WI · Part-time"
+    when: "Oct 2015 – Dec 2015"
+    cats: [other]
+    summary: "Taught beginner skating classes."
+    bullets:
+      - "Taught four-year-olds to skate."

@@ -3,7 +3,7 @@
   var chips = Array.prototype.slice.call(document.querySelectorAll('[data-rcat]'));
   var countEl = document.getElementById('rcount');
   var toggleBtn = document.getElementById('rtoggle-all');
-  var TIP = 'No positions in this category';
+  var TIP = 'Nothing in this category';
   var state = 'all';
 
   function cats(e) { return (e.dataset.cats || '').split(/\s+/); }
@@ -21,7 +21,7 @@
     });
     entries.forEach(function (e) { e.hidden = !inCat(e, state); });
     var n = visible().length;
-    countEl.textContent = state === 'all' ? 'Showing all ' + entries.length + ' positions' : 'Showing ' + n + ' of ' + entries.length + ' positions';
+    countEl.textContent = state === 'all' ? 'Showing all ' + entries.length + ' entries' : 'Showing ' + n + ' of ' + entries.length + ' entries';
     syncToggle();
   }
 
