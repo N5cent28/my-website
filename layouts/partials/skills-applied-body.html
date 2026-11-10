@@ -1,7 +1,6 @@
-
-
-
-  <nav class="filters" aria-label="Filter projects">
+<div class="xp-layout sa-layout">
+  <aside class="xp-side sa-side">
+  <nav class="filters xp-filters" aria-label="Filter projects">
     <div class="filter-row" role="group" aria-label="Category">
       <span class="filter-label">Show</span>
       <button class="chip-btn" type="button" id="cat-all" data-cat="all" aria-pressed="true">All</button>
@@ -35,6 +34,8 @@
       <button class="text-btn" type="button" id="toggle-all">Expand all</button>
     </div>
   </nav>
+  </aside>
+  <div class="sa-main">
 
   <!-- ===================== RESEARCH & INDUSTRY ===================== -->
   <section class="sec" data-sec="research" aria-labelledby="h-research">
@@ -48,7 +49,7 @@
       <div class="group-head">
         <div class="group-title"><h3>UW Department of Medicine · CLARiTI study</h3><span class="group-when">May 2026 – present</span></div>
         <p class="group-role">Imaging Programmer Analyst</p>
-        <p class="group-note">CLARiTI is a $150M, NIH-funded, multi-site study on the biology of neurological aging. I lead QC and data validation for the admin team.</p>
+        <p class="group-note">CLARiTI is a $150M, NIH-funded, multi-site study on the biology of neurological aging.</p>
       </div>
 
       <details class="entry" id="clariti-qc" data-cat="research" data-tags="pipelines imaging stats">
@@ -56,6 +57,7 @@
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I do</h4><ul>
+              <li>Lead QC and data validation for the study's admin team.</li>
               <li>Built automated Python QC and sanity-check pipelines that catch integrity problems in incoming site data before they reach manual review.</li>
               <li>Root-cause mismatches between REDCap metadata and the imaging repository run by USC's Laboratory of Neuro Imaging, separating real data errors from differences in how a site set things up, and reconcile records with SQL.</li>
               <li>Work through discrepancies directly with local site coordinators, in person and by email.</li>
@@ -127,7 +129,7 @@
       <div class="group-head">
         <div class="group-title"><h3>Proteovista LLC</h3><span class="group-when">Jan 2024 – May 2026</span></div>
         <p class="group-role">Bioinformatics Scientist</p>
-        <p class="group-note">A small biotech building protein–DNA binding arrays and aptamer products. I worked directly with the CTO and wet-lab biologists, took on the hardest programming tasks, and trained senior staff on the tools I built.</p>
+        <p class="group-note">A small biotech building protein–DNA binding arrays and aptamer products.</p>
       </div>
 
       <details class="entry" id="pv-rnaseq" data-cat="research" data-tags="genomics pipelines">
@@ -256,7 +258,7 @@
       <div class="group-head">
         <div class="group-title"><h3>Qiongshi Lu Lab, UW–Madison</h3><span class="group-when">Sep 2023 – Mar 2024</span></div>
         <p class="group-role">Graduate Student Research Assistant</p>
-        <p class="group-note">A statistical genetics lab (developers of PUMAS for polygenic risk score tuning) exploring a move into epigenetic aging clocks.</p>
+        <p class="group-note">A statistical genetics lab exploring a move into epigenetic aging clocks.</p>
       </div>
 
       <details class="entry" id="lu-clocks" data-cat="research" data-tags="genomics ml stats">
@@ -300,7 +302,7 @@
       <div class="group-head">
         <div class="group-title"><h3>Fujifilm Cellular Dynamics</h3><span class="group-when">Jun 2022 – Feb 2023</span></div>
         <p class="group-role">Research Specialist</p>
-        <p class="group-note">iPSC-derived cell products in a design-controlled, regulated environment. I worked daily with senior scientists, cell biologists, quality, and a staff biostatistician.</p>
+        <p class="group-note">iPSC-derived cell products in a design-controlled, regulated environment.</p>
       </div>
 
       <details class="entry" id="fcdi" data-cat="research" data-tags="stats lab genomics">
@@ -308,7 +310,7 @@
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
-              <li>Ran statistical workflows to compare cell-media formulations and assess assay reliability, and presented results to the cross-functional team. Leadership recognized the work as a process improvement.</li>
+              <li>Ran statistical workflows, reviewed with the staff biostatistician, to compare cell-media formulations and assess assay reliability, and presented results to a cross-functional team of scientists, cell biologists, and quality. Leadership recognized the work as a process improvement.</li>
               <li>Analyzed flow cytometry and qPCR data to characterize engineered iPSC lines.</li>
               <li>Designed and checked constructs in DNASTAR for transfection and genetic engineering, and trained in lentiviral methods.</li>
               <li>Kept data in the LIMS accurate and wrote protocols, SOPs, technical reports, and design-validation documentation.</li>
@@ -326,7 +328,6 @@
       <div class="group-head">
         <div class="group-title"><h3>Wisconsin Institute for Discovery · Ashton Lab</h3><span class="group-when">Dec 2018 – Mar 2020</span></div>
         <p class="group-role">Undergraduate Research Assistant</p>
-        <p class="group-note">Regional patterning of human pluripotent stem cells into diverse posterior CNS neurons. This is where I started moving from the pipette to the keyboard.</p>
       </div>
 
       <details class="entry" id="wid" data-cat="research" data-tags="lab stats imaging genomics">
@@ -362,17 +363,15 @@
   <section class="sec" data-sec="course" aria-labelledby="h-course">
     <div class="sec-head">
       <h2 id="h-course">Graduate coursework</h2>
-      <p>Projects and problem sets with real code behind them. Metrics are on the course's held-out test sets.</p>
     </div>
 
     <div class="group">
       <div class="group-head">
         <div class="group-title"><h3>UW–Madison · MS Biomedical Data Science</h3><span class="group-when">2024 – 2025</span></div>
-        <p class="group-note">BMI 826 Data Science for Healthcare, BMI 620 Statistics in Human Genetics, CS 760 Machine Learning, BMI 576 Introduction to Bioinformatics, BMI 551 Biostatistics.</p>
       </div>
 
       <details class="entry" id="bmi826-xray" data-cat="course" data-tags="dl ml imaging">
-        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Pneumonia detection from chest X-rays</span><span class="e-line">Elastic net vs. gradient boosting vs. a CNN on 5,840 chest X-rays.</span></span><span class="e-io">X-ray images → pneumonia risk</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Pneumonia detection from chest X-rays</span><span class="e-line">Elastic net vs. gradient boosting vs. a CNN on 5,840 chest X-rays.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -387,7 +386,7 @@
       </details>
 
       <details class="entry" id="bmi826-abstracts" data-cat="course" data-tags="nlp ml">
-        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Classifying PubMed abstract sentences</span><span class="e-line">Labeling each sentence as background, objective, methods, results, or conclusions.</span></span><span class="e-io">210K sentences → section labels</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Classifying PubMed abstract sentences</span><span class="e-line">Labeling each sentence as background, objective, methods, results, or conclusions.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -402,7 +401,7 @@
       </details>
 
       <details class="entry" id="bmi826-gusto" data-cat="course" data-tags="ml stats">
-        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">30-day mortality after heart attack (GUSTO-I)</span><span class="e-line">Clinical risk models validated on a held-out geographic group.</span></span><span class="e-io">trial covariates → mortality risk</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">30-day mortality after heart attack (GUSTO-I)</span><span class="e-line">Clinical risk models validated on a held-out geographic group.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -416,7 +415,7 @@
       </details>
 
       <details class="entry" id="bmi826-ts" data-cat="course" data-tags="dl ml stats pipelines">
-        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Benchmarking clinical time-series forecasting</span><span class="e-line">Final project with Bowman Brown: do deep models beat ARIMA on ICU vitals?</span></span><span class="e-io">vitals and labs → 12-step forecasts</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Benchmarking clinical time-series forecasting</span><span class="e-line">Final project with Bowman Brown: do deep models beat ARIMA on ICU vitals?</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What we did</h4><ul>
@@ -431,7 +430,7 @@
       </details>
 
       <details class="entry" id="bmi620-gwas" data-cat="course" data-tags="genomics stats pipelines">
-        <summary><span class="e-when">BMI 620</span><span class="e-main"><span class="e-title">Schizophrenia GWAS follow-up analysis</span><span class="e-line">PGC3 summary statistics: 2.57M SNPs, 74,776 cases and 101,023 controls.</span></span><span class="e-io">GWAS sumstats → h², r<sub>g</sub>, MR, TWAS</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Schizophrenia GWAS follow-up analysis</span><span class="e-line">PGC3 summary statistics: 2.57M SNPs, 74,776 cases and 101,023 controls.</span></span><span class="e-io">Statistics in Human Genetics</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -453,7 +452,7 @@
       </details>
 
       <details class="entry" id="cs760" data-cat="course" data-tags="ml dl">
-        <summary><span class="e-when">CS 760</span><span class="e-main"><span class="e-title">Core ML algorithms from scratch</span><span class="e-line">Implemented and stress-tested the classics in NumPy before reaching for libraries.</span></span><span class="e-io">MNIST, email, synthetic → curves</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Core ML algorithms from scratch</span><span class="e-line">Implemented and stress-tested the classics in NumPy before reaching for libraries.</span></span><span class="e-io">Machine Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -469,7 +468,7 @@
       </details>
 
       <details class="entry" id="bmi576" data-cat="course" data-tags="genomics ml">
-        <summary><span class="e-when">BMI 576</span><span class="e-main"><span class="e-title">Bioinformatics algorithms by hand</span><span class="e-line">Assembly, alignment, phylogenetics, HMMs, and Bayesian networks written in Python.</span></span><span class="e-io">FASTA → assemblies, alignments, trees</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Bioinformatics algorithms by hand</span><span class="e-line">Assembly, alignment, phylogenetics, HMMs, and Bayesian networks written in Python.</span></span><span class="e-io">Introduction to Bioinformatics</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -488,11 +487,10 @@
     <div class="group">
       <div class="group-head">
         <div class="group-title"><h3>University of Colorado Boulder · MS Data Science courses</h3><span class="group-when">2023 – 2024</span></div>
-        <p class="group-note">11 graduate credits that transferred into the UW–Madison degree. Public repo: <a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">CUB-Public</a>.</p>
       </div>
 
       <details class="entry" id="cu-histo" data-cat="course" data-tags="dl imaging">
-        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Metastatic tissue detection in pathology patches</span><span class="e-line">A CNN trained on the PatchCamelyon lymph-node benchmark.</span></span><span class="e-io">tissue patches → tumor probability</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Metastatic tissue detection in pathology patches</span><span class="e-line">A CNN trained on the PatchCamelyon lymph-node benchmark.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -501,12 +499,13 @@
             </ul></div>
             <p class="result">About 86% validation accuracy.</p>
           </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>NumPy</li><li>Pillow</li></ul></div></div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>NumPy</li><li>Pillow</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li></ul></div></div>
         </div>
       </details>
 
       <details class="entry" id="cu-ct" data-cat="course" data-tags="dl imaging">
-        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Lung cancer type classification from chest CT</span><span class="e-line">Transfer learning with VGG16 across three cancer types and normal tissue.</span></span><span class="e-io">CT slices → 4 classes</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Lung cancer type classification from chest CT</span><span class="e-line">Transfer learning with VGG16 across three cancer types and normal tissue.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -514,12 +513,13 @@
               <li>Documented why accuracy plateaued on so little data and laid out next steps: heavier augmentation, cross-validation, and newer architectures.</li>
             </ul></div>
           </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>VGG16</li></ul></div></div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>VGG16</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li></ul></div></div>
         </div>
       </details>
 
       <details class="entry" id="cu-tweets" data-cat="course" data-tags="nlp dl">
-        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Disaster tweet classification</span><span class="e-line">Linear baselines vs. LSTMs with pretrained word embeddings.</span></span><span class="e-io">tweets → disaster / not</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Disaster tweet classification</span><span class="e-line">Linear baselines vs. LSTMs with pretrained word embeddings.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -527,12 +527,13 @@
               <li>Tuned learning rate, batch size, and dropout, and diagnosed why deeper models underperformed the baseline.</li>
             </ul></div>
           </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>gensim</li><li>NLTK</li><li>scikit-learn</li></ul></div></div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>gensim</li><li>NLTK</li><li>scikit-learn</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li></ul></div></div>
         </div>
       </details>
 
       <details class="entry" id="cu-gan" data-cat="course" data-tags="dl imaging">
-        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Generating dog images with a GAN</span><span class="e-line">A generative adversarial network trained on the Stanford Dogs dataset.</span></span><span class="e-io">dog photos → synthetic images</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Generating dog images with a GAN</span><span class="e-line">A generative adversarial network trained on the Stanford Dogs dataset.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -540,12 +541,13 @@
               <li>Evaluated samples visually and documented the limits of training on local compute.</li>
             </ul></div>
           </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>NumPy</li></ul></div></div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>TensorFlow / Keras</li><li>NumPy</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li></ul></div></div>
         </div>
       </details>
 
       <details class="entry" id="cu-grhl2" data-cat="course" data-tags="ml genomics">
-        <summary><span class="e-when">DTSA 5510</span><span class="e-main"><span class="e-title">Clustering protein–DNA binding sequences</span><span class="e-line">Unsupervised grouping of GRHL2 array probes, linked back to binding strength.</span></span><span class="e-io">probe sequences → clusters + motifs</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Clustering protein–DNA binding sequences</span><span class="e-line">Unsupervised grouping of GRHL2 array probes, linked back to binding strength.</span></span><span class="e-io">Unsupervised Algorithms in ML</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -557,6 +559,7 @@
           <div class="e-col">
             <div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>Biopython</li><li>pandas</li></ul></div>
             <div><h4>Links</h4><ul class="links">
+              <li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li>
               <li><a href="https://youtu.be/19DapI1pLJw" target="_blank" rel="noopener noreferrer">Presentation video</a></li>
               <li><a href="/documents/UnsupervisedML_Final.html" target="_blank" rel="noopener noreferrer">Analysis report</a></li>
             </ul></div>
@@ -565,7 +568,7 @@
       </details>
 
       <details class="entry" id="cu-bbc" data-cat="course" data-tags="nlp ml">
-        <summary><span class="e-when">DTSA 5510</span><span class="e-main"><span class="e-title">Topic discovery and recommenders with matrix factorization</span><span class="e-line">Unsupervised news clustering, a supervised comparison, and an NMF recommender.</span></span><span class="e-io">articles, ratings → topics, predictions</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Topic discovery and recommenders with matrix factorization</span><span class="e-line">Unsupervised news clustering, a supervised comparison, and an NMF recommender.</span></span><span class="e-io">Unsupervised Algorithms in ML</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -575,12 +578,13 @@
             </ul></div>
             <p class="result">About 95% accuracy on news topics without labels.</p>
           </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>NumPy</li><li>pandas</li></ul></div></div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>NumPy</li><li>pandas</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li></ul></div></div>
         </div>
       </details>
 
       <details class="entry" id="cu-revenue" data-cat="course" data-tags="ml">
-        <summary><span class="e-when">DTSA 5509</span><span class="e-main"><span class="e-title">Restaurant revenue prediction</span><span class="e-line">Random forest regression with feature engineering and importance analysis.</span></span><span class="e-io">restaurant attributes → revenue</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Restaurant revenue prediction</span><span class="e-line">Random forest regression with feature engineering and importance analysis.</span></span><span class="e-io">Supervised Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -590,13 +594,14 @@
           </div>
           <div class="e-col">
             <div><h4>Tools</h4><ul class="tools"><li>scikit-learn</li><li>pandas</li><li>matplotlib</li></ul></div>
-            <div><h4>Links</h4><ul class="links"><li><a href="https://youtu.be/eXRhpUnDQmg" target="_blank" rel="noopener noreferrer">Presentation video</a></li></ul></div>
+            <div><h4>Links</h4><ul class="links">
+              <li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li><li><a href="https://youtu.be/eXRhpUnDQmg" target="_blank" rel="noopener noreferrer">Presentation video</a></li></ul></div>
           </div>
         </div>
       </details>
 
       <details class="entry" id="cu-rmd" data-cat="course" data-tags="stats">
-        <summary><span class="e-when">DTSA 5301</span><span class="e-main"><span class="e-title">Reproducible public-data reports in R</span><span class="e-line">Seasonal patterns in NYC young-adult shootings, and early COVID-19 deaths.</span></span><span class="e-io">public CSVs → R Markdown reports</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2023</span><span class="e-main"><span class="e-title">Reproducible public-data reports in R</span><span class="e-line">Seasonal patterns in NYC young-adult shootings, and early COVID-19 deaths.</span></span><span class="e-io">Data Science as a Field</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -605,12 +610,13 @@
               <li>Wrote both as knit-able R Markdown with the data pulled from source, and discussed bias in each.</li>
             </ul></div>
           </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>R</li><li>tidyverse</li><li>ggplot2</li><li>lubridate</li><li>R Markdown</li></ul></div></div>
+          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>R</li><li>tidyverse</li><li>ggplot2</li><li>lubridate</li><li>R Markdown</li></ul></div>
+            <div><h4>Links</h4><ul class="links"><li><a href="https://github.com/N5cent28/CUB-Public" target="_blank" rel="noopener noreferrer">Course repo (CUB-Public)</a></li></ul></div></div>
         </div>
       </details>
 
       <details class="entry" id="cu-algos" data-cat="course" data-tags="pipelines">
-        <summary><span class="e-when">DTSA 55xx</span><span class="e-main"><span class="e-title">Algorithms, data structures, and SQL</span><span class="e-line">Algorithm design and analysis, plus relational database design and SQL.</span></span><span class="e-io">problems → proofs + Python</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2023</span><span class="e-main"><span class="e-title">Algorithms, data structures, and SQL</span><span class="e-line">Algorithm design and analysis, plus relational database design and SQL.</span></span><span class="e-io">Algorithms and Databases</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -621,25 +627,6 @@
             </ul></div>
           </div>
           <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>Python</li><li>NumPy</li><li>SQL</li><li>MySQL</li><li>PostgreSQL</li></ul></div></div>
-        </div>
-      </details>
-    </div>
-
-    <div class="group">
-      <div class="group-head">
-        <div class="group-title"><h3>Other data work</h3></div>
-      </div>
-      <details class="entry" id="alder-mailing" data-cat="course" data-tags="pipelines">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Campaign mailing list from city parcel records</span><span class="e-line">Turned City of Madison parcel data for Alder District 4 into a unit-level mailing list.</span></span><span class="e-io">683 parcels × 60 fields → mail list</span><span class="e-chev" aria-hidden="true"></span></summary>
-        <div class="e-body">
-          <div class="e-col">
-            <div><h4>What I did</h4><ul>
-              <li>Filtered the district's parcel records down to residential addresses.</li>
-              <li>Expanded multi-unit buildings into apartment-level address lines.</li>
-              <li>Formatted the output for mail merge (address lines, city, state, ZIP).</li>
-            </ul></div>
-          </div>
-          <div class="e-col"><div><h4>Tools</h4><ul class="tools"><li>Excel</li><li>Python</li></ul></div></div>
         </div>
       </details>
     </div>
@@ -776,3 +763,5 @@
       </details>
     </div>
   </section>
+  </div>
+</div>
