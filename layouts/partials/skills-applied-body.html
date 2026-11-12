@@ -75,13 +75,13 @@
     <!-- IBNE -->
     <div class="group">
       <div class="group-head">
-        <div class="group-title"><h3>Reykjavík University · Institute of Biomedical and Neural Engineering</h3><span class="group-when">Jun 2024 – 2026</span></div>
-        <p class="group-role">Graduate intern, then continuing research collaborator</p>
+        <div class="group-title"><h3>Reykjavík University · Institute of Biomedical and Neural Engineering</h3><span class="group-when">Jun – Dec 2024</span></div>
+        <p class="group-role">Intern: on site full-time Jun – Sep 2024, then a remote collaborator</p>
         <p class="group-note">Decision support for total hip arthroplasty (THA): should the femoral stem be cemented? I was the technical lead, working with two orthopedic surgeons, a medical graduate, and the institute director.</p>
       </div>
 
       <details class="entry" id="tha-segmentation" data-cat="research" data-tags="imaging pipelines">
-        <summary><span class="e-when">2024–25</span><span class="e-main"><span class="e-title">Automated CT femur segmentation and feature extraction</span><span class="e-line">Scripted the Mimics API to turn preoperative CT scans into standardized bone measurements.</span></span><span class="e-io">CT / DICOM → bone features</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Automated CT femur segmentation and feature extraction</span><span class="e-line">Scripted the Mimics API to turn preoperative CT scans into standardized bone measurements.</span></span><span class="e-io">CT / DICOM → bone features</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -99,7 +99,7 @@
       </details>
 
       <details class="entry" id="tha-ml" data-cat="research" data-tags="ml imaging stats pipelines">
-        <summary><span class="e-when">2024–26</span><span class="e-main"><span class="e-title">ML decision support for cemented vs. uncemented THA</span><span class="e-line">A leakage-safe modeling pipeline that treats surgeon disagreement as part of the problem.</span></span><span class="e-io">bone features + surgeon votes → fixation</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">ML decision support for cemented vs. uncemented THA</span><span class="e-line">A leakage-safe modeling pipeline that treats surgeon disagreement as part of the problem.</span></span><span class="e-io">bone features + surgeon votes → fixation</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -152,7 +152,7 @@
       </details>
 
       <details class="entry" id="pv-grid" data-cat="research" data-tags="imaging pipelines">
-        <summary><span class="e-when">2025–26</span><span class="e-main"><span class="e-title">Microarray grid alignment with computer vision</span><span class="e-line">Replacing manual grid placement in Agilent Feature Extraction with an automated, auditable pipeline.</span></span><span class="e-io">scanner TIFF → grid fit (JSON)</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">2025–26</span><span class="e-main"><span class="e-title">Microarray grid alignment with computer vision</span><span class="e-line">A prototype pipeline to replace manual grid placement in Agilent Feature Extraction.</span></span><span class="e-io">scanner TIFF → grid fit (JSON)</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -161,7 +161,7 @@
               <li>Stage 3: the expected staggered spot grid (scale, rotation, offset, and row/column indexing) is fit to Hough-detected circles with side-balanced scoring, so no edge gets sacrificed to fit the others.</li>
               <li>An operator-in-the-loop Streamlit step allows final nudges, then writes a JSON fit artifact and diagnostic overlays for the extraction stage.</li>
             </ul></div>
-            <p class="result">Turns a slow, operator-dependent GUI task into a batchable, reproducible step with saved diagnostics.</p>
+            <p class="result">Status: the fit was getting close to aligning, but it wasn't yet reliable enough to replace the manual step.</p>
           </div>
           <div class="e-col">
             <div><h4>Tools</h4><ul class="tools"><li>Python</li><li>OpenCV</li><li>NumPy</li><li>SciPy</li><li>tifffile</li><li>Streamlit</li></ul></div>
@@ -371,7 +371,7 @@
       </div>
 
       <details class="entry" id="bmi826-xray" data-cat="course" data-tags="dl ml imaging">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Pneumonia detection from chest X-rays</span><span class="e-line">Elastic net vs. gradient boosting vs. a CNN on 5,840 chest X-rays.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Pneumonia detection from chest X-rays</span><span class="e-line">Elastic net vs. gradient boosting vs. a CNN on 5,840 chest X-rays.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -386,7 +386,7 @@
       </details>
 
       <details class="entry" id="bmi826-abstracts" data-cat="course" data-tags="nlp ml">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Classifying PubMed abstract sentences</span><span class="e-line">Labeling each sentence as background, objective, methods, results, or conclusions.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Classifying PubMed abstract sentences</span><span class="e-line">Labeling each sentence as background, objective, methods, results, or conclusions.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -401,7 +401,7 @@
       </details>
 
       <details class="entry" id="bmi826-gusto" data-cat="course" data-tags="ml stats">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">30-day mortality after heart attack (GUSTO-I)</span><span class="e-line">Clinical risk models validated on a held-out geographic group.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">30-day mortality after heart attack (GUSTO-I)</span><span class="e-line">Clinical risk models validated on a held-out geographic group.</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -415,7 +415,7 @@
       </details>
 
       <details class="entry" id="bmi826-ts" data-cat="course" data-tags="dl ml stats pipelines">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Benchmarking clinical time-series forecasting</span><span class="e-line">Final project with Bowman Brown: do deep models beat ARIMA on ICU vitals?</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">BMI 826</span><span class="e-main"><span class="e-title">Benchmarking clinical time-series forecasting</span><span class="e-line">Final project with Bowman Brown: do deep models beat ARIMA on ICU vitals?</span></span><span class="e-io">Data Science for Healthcare</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What we did</h4><ul>
@@ -430,7 +430,7 @@
       </details>
 
       <details class="entry" id="bmi620-gwas" data-cat="course" data-tags="genomics stats pipelines">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Schizophrenia GWAS follow-up analysis</span><span class="e-line">PGC3 summary statistics: 2.57M SNPs, 74,776 cases and 101,023 controls.</span></span><span class="e-io">Statistics in Human Genetics</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">BMI 620</span><span class="e-main"><span class="e-title">Schizophrenia GWAS follow-up analysis</span><span class="e-line">PGC3 summary statistics: 2.57M SNPs, 74,776 cases and 101,023 controls.</span></span><span class="e-io">Statistics in Human Genetics</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -452,7 +452,7 @@
       </details>
 
       <details class="entry" id="cs760" data-cat="course" data-tags="ml dl">
-        <summary><span class="e-when">2025</span><span class="e-main"><span class="e-title">Core ML algorithms from scratch</span><span class="e-line">Implemented and stress-tested the classics in NumPy before reaching for libraries.</span></span><span class="e-io">Machine Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">CS 760</span><span class="e-main"><span class="e-title">Core ML algorithms from scratch</span><span class="e-line">Implemented and stress-tested the classics in NumPy before reaching for libraries.</span></span><span class="e-io">Machine Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -468,7 +468,7 @@
       </details>
 
       <details class="entry" id="bmi576" data-cat="course" data-tags="genomics ml">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Bioinformatics algorithms by hand</span><span class="e-line">Assembly, alignment, phylogenetics, HMMs, and Bayesian networks written in Python.</span></span><span class="e-io">Introduction to Bioinformatics</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">BMI 576</span><span class="e-main"><span class="e-title">Bioinformatics algorithms by hand</span><span class="e-line">Assembly, alignment, phylogenetics, HMMs, and Bayesian networks written in Python.</span></span><span class="e-io">Introduction to Bioinformatics</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -490,7 +490,7 @@
       </div>
 
       <details class="entry" id="cu-histo" data-cat="course" data-tags="dl imaging">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Metastatic tissue detection in pathology patches</span><span class="e-line">A CNN trained on the PatchCamelyon lymph-node benchmark.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Metastatic tissue detection in pathology patches</span><span class="e-line">A CNN trained on the PatchCamelyon lymph-node benchmark.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -505,7 +505,7 @@
       </details>
 
       <details class="entry" id="cu-ct" data-cat="course" data-tags="dl imaging">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Lung cancer type classification from chest CT</span><span class="e-line">Transfer learning with VGG16 across three cancer types and normal tissue.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Lung cancer type classification from chest CT</span><span class="e-line">Transfer learning with VGG16 across three cancer types and normal tissue.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -519,7 +519,7 @@
       </details>
 
       <details class="entry" id="cu-tweets" data-cat="course" data-tags="nlp dl">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Disaster tweet classification</span><span class="e-line">Linear baselines vs. LSTMs with pretrained word embeddings.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Disaster tweet classification</span><span class="e-line">Linear baselines vs. LSTMs with pretrained word embeddings.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -533,7 +533,7 @@
       </details>
 
       <details class="entry" id="cu-gan" data-cat="course" data-tags="dl imaging">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Generating dog images with a GAN</span><span class="e-line">A generative adversarial network trained on the Stanford Dogs dataset.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5511</span><span class="e-main"><span class="e-title">Generating dog images with a GAN</span><span class="e-line">A generative adversarial network trained on the Stanford Dogs dataset.</span></span><span class="e-io">Introduction to Deep Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -547,7 +547,7 @@
       </details>
 
       <details class="entry" id="cu-grhl2" data-cat="course" data-tags="ml genomics">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Clustering protein–DNA binding sequences</span><span class="e-line">Unsupervised grouping of GRHL2 array probes, linked back to binding strength.</span></span><span class="e-io">Unsupervised Algorithms in ML</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5510</span><span class="e-main"><span class="e-title">Clustering protein–DNA binding sequences</span><span class="e-line">Unsupervised grouping of GRHL2 array probes, linked back to binding strength.</span></span><span class="e-io">Unsupervised Algorithms in ML</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -568,7 +568,7 @@
       </details>
 
       <details class="entry" id="cu-bbc" data-cat="course" data-tags="nlp ml">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Topic discovery and recommenders with matrix factorization</span><span class="e-line">Unsupervised news clustering, a supervised comparison, and an NMF recommender.</span></span><span class="e-io">Unsupervised Algorithms in ML</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5510</span><span class="e-main"><span class="e-title">Topic discovery and recommenders with matrix factorization</span><span class="e-line">Unsupervised news clustering, a supervised comparison, and an NMF recommender.</span></span><span class="e-io">Unsupervised Algorithms in ML</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -584,7 +584,7 @@
       </details>
 
       <details class="entry" id="cu-revenue" data-cat="course" data-tags="ml">
-        <summary><span class="e-when">2024</span><span class="e-main"><span class="e-title">Restaurant revenue prediction</span><span class="e-line">Random forest regression with feature engineering and importance analysis.</span></span><span class="e-io">Supervised Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5509</span><span class="e-main"><span class="e-title">Restaurant revenue prediction</span><span class="e-line">Random forest regression with feature engineering and importance analysis.</span></span><span class="e-io">Supervised Learning</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -601,7 +601,7 @@
       </details>
 
       <details class="entry" id="cu-rmd" data-cat="course" data-tags="stats">
-        <summary><span class="e-when">2023</span><span class="e-main"><span class="e-title">Reproducible public-data reports in R</span><span class="e-line">Seasonal patterns in NYC young-adult shootings, and early COVID-19 deaths.</span></span><span class="e-io">Data Science as a Field</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 5301</span><span class="e-main"><span class="e-title">Reproducible public-data reports in R</span><span class="e-line">Seasonal patterns in NYC young-adult shootings, and early COVID-19 deaths.</span></span><span class="e-io">Data Science as a Field</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>
@@ -616,7 +616,7 @@
       </details>
 
       <details class="entry" id="cu-algos" data-cat="course" data-tags="pipelines">
-        <summary><span class="e-when">2023</span><span class="e-main"><span class="e-title">Algorithms, data structures, and SQL</span><span class="e-line">Algorithm design and analysis, plus relational database design and SQL.</span></span><span class="e-io">Algorithms and Databases</span><span class="e-chev" aria-hidden="true"></span></summary>
+        <summary><span class="e-when">DTSA 55xx</span><span class="e-main"><span class="e-title">Algorithms, data structures, and SQL</span><span class="e-line">Algorithm design and analysis, plus relational database design and SQL.</span></span><span class="e-io">Algorithms and Databases</span><span class="e-chev" aria-hidden="true"></span></summary>
         <div class="e-body">
           <div class="e-col">
             <div><h4>What I did</h4><ul>

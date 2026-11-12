@@ -50,7 +50,7 @@ positions:
       - "Architected Unix-based Python pipelines that turn raw sequencing and array data into analysis-ready datasets for aptamer discovery and genome-building product design."
       - "Built RNA-seq, motif-enrichment, and oligo-design workflows with BLAST, SRA Toolkit, HISAT2, and Biopython, drawing on NCBI, UniProt, and the UCSC Genome Browser."
       - "Automated array QC and visualization in Python and Excel VBA, cutting processing time by about 90%."
-      - "Replaced manual microarray grid alignment with a computer-vision pipeline, and automated web-tool lookups with Selenium."
+      - "Prototyped a computer-vision pipeline to automate microarray grid alignment (close, but not yet production-ready), and automated web-tool lookups with Selenium."
       - "Partnered with the CTO on the company's hardest computational tasks and trained senior staff on the tools I built."
       - "Supported the bioinformatics for a cancer genomics publication in the Journal of the Endocrine Society (2024)."
     skills: [Python, Bash, BLAST, HISAT2, Biopython, OpenCV, Selenium, Excel VBA, Git]
@@ -74,10 +74,10 @@ positions:
     end: "2024-12"
     title: "Intern"
     org: "Institute of Biomedical and Neural Engineering, Reykjavík University"
-    place: "Reykjavík, Iceland · Hybrid"
+    place: "Reykjavík, Iceland · Full-time on site Jun – Sep 2024, then remote"
     when: "Jun 2024 – Dec 2024"
     cats: [data, research]
-    summary: "Technical lead on CT imaging and machine-learning decision support for total hip arthroplasty."
+    summary: "Technical lead on CT imaging and machine-learning decision support for total hip arthroplasty. On site full-time for the Mimics automation, then remote for the machine-learning work."
     bullets:
       - "Automated femur CT segmentation and feature extraction with the Mimics Scripting API, cutting processing from about 10 hours to 4 minutes per image."
       - "Built reproducible supervised ML models for cemented vs. uncemented hip-replacement decisions (KNN imputation, scaling, feature engineering, grouped cross-validation)."
