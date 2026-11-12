@@ -1,0 +1,32 @@
+{{- $places := site.Data.travel.places -}}
+<section class="tg" aria-label="Travel map">
+  <div class="tg-stage">
+    <div class="tg-globe" id="tg-globe" role="img" aria-label="Interactive globe with a pin for each place I've traveled"></div>
+    <p class="tg-hint" id="tg-hint">Drag to spin · scroll to zoom · click a pin</p>
+  </div>
+
+  <div class="tg-side">
+    <h3 class="tg-title" id="travel">{{ .Get "title" | default "Travel" }}</h3>
+    <aside class="tg-card" id="tg-card" aria-live="polite">
+      <div class="tg-empty" id="tg-empty">
+        <p class="tg-kicker">{{ len $places }} places</p>
+        <p>Spin the globe and click a pin.</p>
+      </div>
+      <div class="tg-detail" id="tg-detail" hidden>
+        <button class="tg-close" type="button" id="tg-close" aria-label="Close">×</button>
+        <div class="tg-media" id="tg-media">
+          <img class="tg-photo" id="tg-photo" alt="" loading="lazy">
+          <button class="tg-step tg-prev" type="button" id="tg-prev" aria-label="Previous trip">‹</button>
+          <button class="tg-step tg-next" type="button" id="tg-next" aria-label="Next trip">›</button>
+        </div>
+        <p class="tg-kicker" id="tg-years"></p>
+        <h4 class="tg-name" id="tg-name"></h4>
+        <p class="tg-stops" id="tg-stops"></p>
+        <p class="tg-blurb" id="tg-blurb"></p>
+      </div>
+    </aside>
+  </div>
+</section>
+<script type="application/json" id="tg-data">{{ $places | jsonify | safeJS }}</script>
+<script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js" defer></script>
+<script src="{{ "js/travel-globe.js" | relURL }}" defer></script>

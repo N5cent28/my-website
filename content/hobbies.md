@@ -33,4 +33,7 @@ I played for the <a href="https://www.instagram.com/p/B5vD3mwnhD-/?img_index=1" 
 
 These days I play for the <a href="https://www.instagram.com/madisonradicals/" target="_blank" rel="noopener noreferrer">Madison Radicals</a>, where I get to dive around in front of actual fans! Still can't believe people pay to watch us throw frisbees around.
 
-**Currently accepting suggestions for more hobbies that involve flying through air or gliding through water* 🚀 
+{{< travel-globe >}}
+
+**Currently accepting suggestions for more hobbies that involve flying through air or gliding through water* 🚀
+

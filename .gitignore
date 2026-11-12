@@ -43,3 +43,7 @@ venv/
 # Build output
 dist/
 build/
+# Private source files (originals kept locally; the site uses data/travel.yaml and static/images/travel/)
+static/documents/My Travel.csv
+static/images/globe/*.jpeg
+static/images/globe/*.heic

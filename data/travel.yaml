@@ -1,0 +1,210 @@
+# Travel globe on the Hobbies page.
+# Each place gets one card. `points` are the pins for it (one or more);
+# clicking any pin opens the card. Photos live in /static/images/travel (leave "" for none).
+places:
+  - id: madison
+    name: Madison, WI
+    years: "1998"
+    photo: /images/travel/madison.jpg
+    blurb: "My hometown and where I want to spend every summer until I'm too broken to play sports"
+    points:
+      - { name: Madison, lat: 43.0731, lng: -89.4012 }
+
+  - id: spain
+    name: Spain
+    years: "2018"
+    photo: /images/travel/spain.jpg
+    blurb: "My first solo trip abroad! Three weeks split between my friend Llorián's family and a relative, who all kindly put up with my Spanish."
+    points:
+      - { name: Barcelona, lat: 41.3874, lng: 2.1686 }
+      - { name: Sitges, lat: 41.2372, lng: 1.8059 }
+      - { name: Asturias, lat: 43.3614, lng: -5.8494 }
+
+  - id: italy
+    name: Italy
+    years: "2025, 2026"
+    photo: /images/travel/italy.jpg
+    blurb: "Two excellent weeks with my friend Matteo, then back with friends to play Paganello, a beach ultimate tournament in Rimini. Turns out sand does not make me any faster."
+    points:
+      - { name: Bologna, lat: 44.4949, lng: 11.3426 }
+      - { name: Verona, lat: 45.4384, lng: 10.9916 }
+      - { name: Rome, lat: 41.9028, lng: 12.4964 }
+      - { name: Florence, lat: 43.7696, lng: 11.2558 }
+      - { name: Venice, lat: 45.4408, lng: 12.3155 }
+      - { name: Sicily, lat: 37.6000, lng: 14.0154 }
+      - { name: Rimini, lat: 44.0678, lng: 12.5695 }
+
+  - id: sweden
+    name: Sweden
+    years: "2014"
+    photo: ""
+    blurb: "2 weeks training soccer with my friend Ethan and where I first learned to windsurf!"
+    points:
+      - { name: Sweden, lat: 59.3293, lng: 18.0686 }
+
+  - id: bonaire
+    name: Bonaire
+    years: "2022"
+    photo: /images/travel/bonaire.jpg
+    blurb: "Family trip spent scuba diving and windsurfing"
+    points:
+      - { name: Bonaire, lat: 12.1443, lng: -68.2655 }
+
+  - id: mexico
+    name: Mexico
+    years: "2020, 2026"
+    photo: /images/travel/mexico.jpg
+    blurb: "Our family dive trip went so smoothly I had to bring friends back for some volleyball, moped exploration, and hitchhiking. Someone kindly waited until my final day to steal my bike!"
+    points:
+      - { name: Yucatán Peninsula, lat: 20.9674, lng: -89.5926 }
+      - { name: Playa del Carmen, lat: 20.6296, lng: -87.0739 }
+      - { name: Cozumel, lat: 20.4230, lng: -86.9223 }
+
+  - id: medellin
+    name: Medellín, Colombia
+    years: "2027"
+    photo: ""
+    blurb: "2 months working remotely and playing ultimate frisbee. Eternal spring here I come!"
+    points:
+      - { name: Medellín, lat: 6.2442, lng: -75.5812 }
+
+  - id: australia
+    name: Australia
+    years: "2023"
+    photo: /images/travel/australia.jpg
+    blurb: "3 months playing ultimate frisbee and exploring with my mate Deller"
+    points:
+      - { name: Melbourne, lat: -37.8136, lng: 144.9631 }
+      - { name: Sydney, lat: -33.8688, lng: 151.2093 }
+      - { name: Cairns, lat: -16.9186, lng: 145.7781 }
+
+  - id: utah
+    name: Utah
+    years: "2023, 2026"
+    photo: /images/travel/utah.jpg
+    blurb: "Best road trips of my life! So good had to do it twice. Was happy to be able to bring my aussie and italian friends along for the ride!"
+    points:
+      - { name: Utah, lat: 38.3670, lng: -111.2615 }
+
+  - id: los-angeles
+    name: Los Angeles, CA
+    years: "2021"
+    photo: /images/travel/los-angeles.jpg
+    blurb: "Came for a frisbee tournament, stayed due to the traffic. LA and I have agreed to not see each other anymore."
+    points:
+      - { name: Los Angeles, lat: 34.0522, lng: -118.2437 }
+
+  - id: san-diego
+    name: San Diego, CA
+    years: "2023"
+    photo: /images/travel/san-diego.jpg
+    blurb: "Capped off a SW road trip here and crashed on the couch of my teammates while they competed at USAU Club Nationals"
+    points:
+      - { name: San Diego, lat: 32.7157, lng: -117.1611 }
+
+  - id: seattle
+    name: Seattle & Olympic National Park, WA
+    years: "2026"
+    photo: /images/travel/seattle.jpg
+    blurb: "Very cool area. Stayed with my family at my Uncle's on Bainbridge Island"
+    points:
+      - { name: Seattle, lat: 47.6062, lng: -122.3321 }
+      - { name: Olympic National Park, lat: 47.8021, lng: -123.6044 }
+
+  - id: colorado
+    name: Denver & Boulder, CO
+    years: "2018, 2019, 2021, 2023, 2025"
+    photo: /images/travel/colorado.jpg
+    blurb: "Honestly not even sure how many times I've visited, but I owe CO with my love for mountains. Crashed on various (6?) floors over the years. Highlight was a last minute $21 Spirit flight from Madison direct to Denver in 2021. Ask me how I got my $280 lift ticket lowered to $25!"
+    points:
+      - { name: Denver, lat: 39.7392, lng: -104.9903 }
+      - { name: Boulder, lat: 40.0150, lng: -105.2705 }
+
+  - id: black-hills
+    name: Black Hills & Badlands, SD
+    years: "2023"
+    photo: /images/travel/black-hills.jpg
+    blurb: "Excellent road trip with friends"
+    points:
+      - { name: Black Hills, lat: 43.9939, lng: -103.7718 }
+      - { name: Badlands, lat: 43.8554, lng: -102.3397 }
+
+  - id: yellowstone
+    name: Yellowstone National Park
+    years: "2015"
+    photo: ""
+    blurb: "Family road trip: geysers, bison, and me asking \"are we there yet?\""
+    points:
+      - { name: Yellowstone, lat: 44.4280, lng: -110.5885 }
+
+  - id: se-alaska
+    name: SE Alaska
+    years: "2022, 2025"
+    photo: /images/travel/se-alaska.jpg
+    blurb: "3 weeks living on my uncle's sailboat, best wildlife viewing I've ever seen by far! Don't ask me about being med-evac'd"
+    points:
+      - { name: SE Alaska, lat: 57.0531, lng: -135.3300 }
+
+  - id: iceland
+    name: Iceland
+    years: "2024"
+    photo: /images/travel/iceland.jpg
+    blurb: "3 months interning and exploring on random road trips with local friends! I hosted weekly LOTR potlucks and had to move 7 times. In the end, I stayed housed and didn't need to use my tent!"
+    points:
+      - { name: Iceland, lat: 64.1466, lng: -21.9426 }
+
+  - id: smoky-mountains
+    name: Smoky Mountains, TN
+    years: "2014, 2021"
+    photo: /images/travel/smoky-mountains.jpg
+    blurb: "Family trip. A biome I can truly feel at home in."
+    points:
+      - { name: Smoky Mountains, lat: 35.6532, lng: -83.5070 }
+
+  - id: niagara
+    name: Niagara Falls, Canada
+    years: ""
+    photo: ""
+    blurb: "Family trip"
+    points:
+      - { name: Niagara Falls, lat: 43.0896, lng: -79.0849 }
+
+  - id: madeline-island
+    name: Madeline Island, Lake Superior
+    years: "Too many to list"
+    photo: /images/travel/madeline-island.jpg
+    blurb: "Semi-annual trips to the apostle islands are a must! Tell me your deep water solo spots and I'll tell you mine"
+    points:
+      - { name: Madeline Island, lat: 46.7980, lng: -90.7700 }
+
+  - id: puerto-rico
+    name: Puerto Rico
+    years: "2023, 2024"
+    photo: /images/travel/puerto-rico.jpg
+    blurb: "Trip with my partner Erin and a very memorable 2 weeks surviving in hammocks on the beach with friends!"
+    points:
+      - { name: Puerto Rico, lat: 18.4655, lng: -66.1057 }
+
+  - id: honolulu
+    name: Honolulu, HI
+    years: "2008"
+    photo: ""
+    blurb: "My family moved for 6 months. Worth skipping 4th grade? You betcha."
+    points:
+      - { name: Honolulu, lat: 21.3069, lng: -157.8583 }
+
+  - id: croatia
+    name: Croatia
+    years: "2026"
+    photo: /images/travel/croatia.jpg
+    blurb: "A week adventuring solo, though never actually alone: hostels make friends easy to come by."
+    points:
+      - { name: Croatia, lat: 43.5081, lng: 16.4402 }
+
+  - id: costa-rica
+    name: Costa Rica
+    years: "2018"
+    photo: /images/travel/costa-rica.jpg
+    blurb: "Family trip. Pura Vida!"
+    points:
+      - { name: Costa Rica, lat: 9.7489, lng: -83.7534 }
